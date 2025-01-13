@@ -2,3 +2,23 @@
 
 @import url(./grid_12_flex.css);
 @import url(./reset.css);
+
+html,
+body {
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+  font-size: 16px;
+  line-height: normal;
+}
+
+/* root */
+:root {
+  /* 메인색 */
+  --color-primary: #3076bc;
+  --color-secondary: #fff;
+  --color-tertiary: #777;
+  --color-quaternary: #eee;
+  /* 폰트색 */
+  --color-font-main: #111;
+  /* 배경색 */
+  --color-site-bg: hsla(60, 10%, 96.08%, 1);
+}

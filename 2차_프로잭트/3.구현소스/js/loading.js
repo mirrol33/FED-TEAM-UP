@@ -11,5 +11,8 @@ function counter() {
     }
   }, 10);
 }
-
 counter();
+
+document.addEventListener("load", function () {
+  window.scrollTo(0, 0);
+});

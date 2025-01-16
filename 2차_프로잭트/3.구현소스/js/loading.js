@@ -13,6 +13,6 @@ function counter() {
 }
 counter();
 
-document.addEventListener("load", function () {
-  window.scrollTo(0, 0);
+$(function(){
+    $("html, body").animate({ scrollTop: 0 }, "fast"); 
 });

@@ -58,6 +58,24 @@ header {
   font-size: min(1.8vw, 1.2rem);
   font-weight: 600;
 }
+.header-menu li {
+  position: relative;
+}
+.header-menu li a::after {
+  background-color: var(--color-font-sub);
+  content: "";
+  height: 1px;
+  min-width: 0%;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  transition: all .3s ease-out;
+}
+.header-menu li a:hover::after {
+  left: 0;
+  right: unset;
+  min-width: 100%;
+}
 .ham-nav-wrap {
   display: none;
 }
@@ -87,9 +105,15 @@ footer {
   font-weight: 700;
 }
 
+/*********** hover effect ***********/
+@media (hover: hover) {
+
+}
+
 /******************************* 미디어쿼리(1200px이하) *******************************/
 @media all and (max-width: 1200px) {
 }
+
 /******************************* 미디어쿼리(768px이하) *******************************/
 @media all and (max-width: 768px) {
   .header-menu {

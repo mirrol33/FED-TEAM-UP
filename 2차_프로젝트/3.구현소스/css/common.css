@@ -69,7 +69,7 @@ header {
   position: absolute;
   right: 0;
   top: 100%;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .header-menu li a:hover::after {
   left: 0;
@@ -80,11 +80,20 @@ header {
   display: none;
 }
 .ham-nav-btn {
-  display: none;
+  text-align: center;
+  position: fixed;
+  top: -4vh;
+  left: 50%;
+  translate: -50% 0%;
+  transition: all 0.3s ease-out;
 }
+.ham-nav-btn.on {
+  top: 4vh;
+}
+
 /*********** main 컨텐츠영역 ***********/
 main {
-  min-height: 1200px;
+  min-height: 1600px;
 }
 
 /*********** footer 하단영역 ***********/
@@ -107,7 +116,6 @@ footer {
 
 /*********** hover effect ***********/
 @media (hover: hover) {
-
 }
 
 /******************************* 미디어쿼리(1200px이하) *******************************/

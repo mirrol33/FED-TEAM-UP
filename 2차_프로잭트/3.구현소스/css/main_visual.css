@@ -4,14 +4,79 @@ body * {
     outline: 1px dashed red;
 }
 
-.main-visual-page img{
+.main-visual-page{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#main-img{
     position: absolute;
-    border: 0;
-    object-fit: cover;
     width: 100%;
     height: 100%;
-    top: 0;
-    bottom: 0;
-    right: 0;
+    object-fit: cover;
+    top: 100%;
     left: 0;
+    border-radius: 0 0 35% 34%;
+    mask-image: linear-gradient(to bottom, black 56%, transparent 98%);
+    animation: up-main-img-ani 5s ease-in-out forwards;
+}
+
+@keyframes up-main-img-ani {
+    to{
+        top: 0;
+    }
+}
+
+#up-logo{
+    position: absolute;
+    width: 30%;
+    top: 20%;
+    left: 100%;
+    opacity: 0;
+    animation: up-logo-img-ani 3s ease-out 5s forwards;
+}
+/* .up-logo-ani-cls{
+    animation: up-logo-img-ani 3s ease-out 5s forwards;
+
+} */
+
+@keyframes up-logo-img-ani {
+    to{
+        left: 60%;
+        opacity: 1;
+    }
+}
+
+#main-text{
+    position: absolute;
+    width: 40%;
+    top: 70%;
+    left: 100%;
+    font-size: 50px;
+    color: #fff;
+    text-shadow: 0 0 5px #00000085;
+    opacity: 0;
+    animation: up-text-ani 3s ease-out 8s forwards;
+}
+
+@keyframes up-text-ani {
+    to{
+        left: 60%;
+        opacity: 1;
+    }
+}
+
+
+.intro-text-box{
+    text-align: center;
+    padding: 5vh 0;
+}
+.intro-text-box h2{
+    font-size: 50px;
+}
+.intro-text-box p{
+    font-size: 25px;
+    line-height: 1.8;
+    padding: 0 20vw;
 }

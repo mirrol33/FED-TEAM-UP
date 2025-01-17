@@ -35,11 +35,11 @@ const headerComponent = {
       <div class="header__menu-circle n4"></div>
       <div class="header__menu-circle n5"></div>
       <ul class="ham-nav">
-        <li><a href="./">Home</a></li>
-        <li><a href="#none">About</a></li>
-        <li><a href="#none">Story</a></li>
-        <li><a href="#none">Video</a></li>
-        <li><a href="#none">Products</a></li>
+        <li @mouseover="addClass" @mouseout="removeClass"><a href="./">Home</a></li>
+        <li @mouseover="addClass" @mouseout="removeClass"><a href="#none">About</a></li>
+        <li @mouseover="addClass" @mouseout="removeClass"><a href="#none">Story</a></li>
+        <li @mouseover="addClass" @mouseout="removeClass"><a href="#none">Video</a></li>
+        <li @mouseover="addClass" @mouseout="removeClass"><a href="#none">Products</a></li>
         <li>
           <a href="#none">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg>
@@ -52,13 +52,32 @@ const headerComponent = {
     </div>
     </div>
   `,
+  methods: {
+    // 마우스 오버 시
+    addClass(e) {
+      let tg = e.currentTarget;
+      tg.classList.add("on");
+      // 풍선이미지 추가
+      let addSpan = document.createElement("span");
+      addSpan.innerHTML = `<img src="./images/Balloon.svg">`;
+      addSpan.className = "after-span";
+      tg.appendChild(addSpan);
+    },
+    // 마우스 아웃 시
+    removeClass(e) {
+      let tg = e.currentTarget;
+      tg.classList.remove("on");
+      // 풍선이미지 삭제
+      tg.removeChild("after-span");
+    },
+  },
 };
 const footerComponent = {
   template: `
-  <div class="footer">
-        <p>@2025 All Rights Reserved.</p>
-        <p>Created by UP TEAM</p>
-       </div>
+    <div class="footer">
+    <p>@2025 All Rights Reserved.</p>
+    <p>Created by UP TEAM</p>
+    </div>
   `,
 };
 
@@ -67,14 +86,14 @@ new Vue({
   components: {
     "header-component": headerComponent,
     "footer-component": footerComponent,
-  },
+  }, 
 });
 
 const headerMenu = myFn.qs(".ham-nav-btn");
 myFn.addEvt(window, "wheel", (e) => {
   let delta = e.wheelDelta;
   // 스크롤 윈도우 top 값 구하기
-  let scrollTop = window.pageYOffset;
+  let scrollTop = window.scrollY;
   console.log(scrollTop);
 
   // wheelDelta값이 마이너스는 아랫방향

@@ -159,11 +159,18 @@ header {
   font-size: 3rem;
   font-weight: 700;
 }
-.ham-nav a svg {
+.ham-nav li > a > svg {
   height: 40px;
   margin: 8px;
 }
-
+.ham-nav li > span > img {
+  height: 20px;
+  opacity: 0;
+  transition: all .3s ease-out;
+}
+.ham-nav li.on > span > img {
+  opacity: 1;
+}
 
 /*********** main 컨텐츠영역 ***********/
 main {

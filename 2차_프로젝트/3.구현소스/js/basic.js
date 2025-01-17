@@ -70,8 +70,11 @@ const headerComponent = {
     removeClass(e) {
       let tg = e.currentTarget;
       tg.classList.remove("on");
+      let addSpan = tg.querySelector('.balloon');
       // 풍선이미지 삭제
-      tg.removeChild("balloon");
+      if(tg.querySelector('.balloon')){
+        tg.removeChild(addSpan);
+      }
     },
   },
 };
@@ -93,18 +96,21 @@ new Vue({
 });
 
 const headerMenu = myFn.qs(".ham-nav-btn");
-myFn.addEvt(window, "wheel", (e) => {
-  let delta = e.wheelDelta;
-  // 스크롤 윈도우 top 값 구하기
-  let scrollTop = window.scrollY;
-  console.log(scrollTop);
-
-  // wheelDelta값이 마이너스는 아랫방향
-  // -> #header에 .on을 줘서 숨기기
-  if (delta < 0) headerMenu.classList.remove("on");
-  else headerMenu.classList.add("on");
-  if (scrollTop < 200) headerMenu.classList.remove("on");
-}); ///////// wheel 이벤트 함수 ////////
+let preScrollTop = 0;
+window.addEventListener('scroll',() => {
+  	let nextScrollTop = window.scrollY;
+    // console.log('scroll',nextScrollTop);
+  
+	if(preScrollTop < nextScrollTop || nextScrollTop < 100) {
+      // console.log('Down!');
+      headerMenu.classList.remove("on");
+    }
+	else {
+      // console.log('Up!');
+      headerMenu.classList.add("on");
+    }
+	preScrollTop = nextScrollTop;
+});
 
 $(".ham-nav-btn").click(() => {
   $(".ham-nav-wrap").toggle();

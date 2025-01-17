@@ -95,7 +95,7 @@ header {
   height: 30vw;
   display: block;
   border-radius: 100%;
-  position: absolute;  
+  position: absolute;
 }
 .header__menu-circle.n1 {
   left: 0%;
@@ -124,14 +124,18 @@ header {
   top: -4vh;
   left: 50%;
   translate: -50% 0%;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
   z-index: 2;
 }
 .ham-nav-btn.on {
   top: 4vh;
 }
 .ham-nav-btn.active {
-  top: 4vh !important;  
+  top: 4vh !important;
+}
+.ham-nav-btn .burger-line__top,
+.ham-nav-btn .burger-line__bottom {
+  transition: all 0.3s ease-out;
 }
 .ham-nav-btn.active .burger-line__top {
   y: 7;
@@ -147,13 +151,17 @@ header {
 }
 
 .ham-nav {
-  position:absolute;
+  position: absolute;
   top: 10vh;
   left: 50%;
   translate: -50% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .ham-nav li {
-  padding: 8px 0;
+  position: relative;
+  padding: 8px;
 }
 .ham-nav a {
   font-size: 3rem;
@@ -164,17 +172,40 @@ header {
   margin: 8px;
 }
 .ham-nav li > span > img {
-  height: 20px;
+  height: 28px;
   opacity: 0;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .ham-nav li.on > span > img {
   opacity: 1;
 }
+.ham-nav li .balloon {
+  animation: balloon-ani 1s linear infinite forwards;
+}
+.ham-nav li:nth-child(1n) .balloon {
+  position: absolute;
+  left: -8%;
+}
+.ham-nav li:nth-child(2n) .balloon {
+  position: absolute;
+  left: unset;
+  right: -8%;
+}
+@keyframes balloon-ani {
+  0% {
+    transform: translateY(10%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(10%);
+  }
+}
 
 /*********** main 컨텐츠영역 ***********/
 main {
-  min-height: 1600px;
+  min-height: 2000px;
 }
 
 /*********** footer 하단영역 ***********/
@@ -201,6 +232,9 @@ footer {
 
 /******************************* 미디어쿼리(1200px이하) *******************************/
 @media all and (max-width: 1200px) {
+  .ham-nav-wrap {
+    height: 100vh;
+  }
 }
 
 /******************************* 미디어쿼리(768px이하) *******************************/

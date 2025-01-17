@@ -1,0 +1,14 @@
+/* 배너영역 */
+
+body * {
+    outline: 1px dashed red;
+}
+
+.main-visual-page img{
+    position: relative;
+    border: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
+}

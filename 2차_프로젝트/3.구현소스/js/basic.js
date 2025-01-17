@@ -60,7 +60,7 @@ const headerComponent = {
       // 풍선이미지 추가
       let addSpan = document.createElement("span");
       addSpan.innerHTML = `<img src="./images/Balloon.svg">`;
-      addSpan.className = "after-span";
+      addSpan.className = "balloon";
       tg.appendChild(addSpan);
     },
     // 마우스 아웃 시
@@ -68,7 +68,7 @@ const headerComponent = {
       let tg = e.currentTarget;
       tg.classList.remove("on");
       // 풍선이미지 삭제
-      tg.removeChild("after-span");
+      tg.removeChild("balloon");
     },
   },
 };

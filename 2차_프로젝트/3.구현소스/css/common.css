@@ -55,7 +55,7 @@ header {
 }
 .header-menu a {
   color: var(--color-font-sub);
-  font-size: 1.2rem;
+  font-size: min(1.8vw, 1.2rem);
   font-weight: 600;
 }
 .ham-nav-wrap {
@@ -83,6 +83,20 @@ footer {
 }
 .footer p {
   color: var(--color-font-sub);
-  font-size: 1.6rem;
+  font-size: min(4vw, 1.6rem);
   font-weight: 700;
+}
+
+/******************************* 미디어쿼리(1200px이하) *******************************/
+@media all and (max-width: 1200px) {
+}
+/******************************* 미디어쿼리(768px이하) *******************************/
+@media all and (max-width: 768px) {
+  .header-menu {
+    display: none;
+  }
+  .footer {
+    padding: 2vh 0;
+    display: block;
+  }
 }

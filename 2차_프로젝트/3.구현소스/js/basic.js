@@ -61,7 +61,10 @@ const headerComponent = {
       let addSpan = document.createElement("span");
       addSpan.innerHTML = `<img src="./images/Balloon.svg">`;
       addSpan.className = "balloon";
-      tg.appendChild(addSpan);
+      // 만약 .balloon 가 존재하면 추가 안함!
+      if(!tg.querySelector('.balloon')){
+        tg.appendChild(addSpan);
+      }
     },
     // 마우스 아웃 시
     removeClass(e) {

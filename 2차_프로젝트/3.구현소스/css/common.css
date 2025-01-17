@@ -19,6 +19,70 @@ body {
   --color-quaternary: #eee;
   /* 폰트색 */
   --color-font-main: #111;
+  --color-font-sub: #333;
   /* 배경색 */
   --color-site-bg: hsla(60, 10%, 96.08%, 1);
+}
+
+/************ header 상단영역 ************/
+header {
+  position: relative;
+  margin: 4vh auto;
+  width: 90%;
+}
+.header h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: min(20vw, 160px);
+  height: auto;
+}
+.header h1 img {
+  width: 100%;
+  height: auto;
+}
+.header-menu {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% 0;
+}
+.header-menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.header-menu a {
+  color: var(--color-font-sub);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.ham-nav-wrap {
+  display: none;
+}
+.ham-nav-btn {
+  display: none;
+}
+/*********** main 컨텐츠영역 ***********/
+main {
+  min-height: 1200px;
+}
+
+/*********** footer 하단영역 ***********/
+footer {
+  border-top: 1px solid var(--color-quaternary);
+  background-color: var(--color-site-bg);
+}
+.footer {
+  margin: 0 auto;
+  width: 90%;
+  padding: 5vh 0;
+  display: flex;
+  justify-content: space-between;
+}
+.footer p {
+  color: var(--color-font-sub);
+  font-size: 1.6rem;
+  font-weight: 700;
 }

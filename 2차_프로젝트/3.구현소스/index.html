@@ -15,51 +15,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
     <!--// 공통 CSS/JS 삭제불가!! -->
-
   </head>
   <body>
-    <header id="header">
-      <!-- 1. 상단영역 -->
-       <div class="header">
-        <h1>logo</h1>
-        <nav class="header-menu">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Story</a></li>
-            <li><a href="#">Video</a></li>
-            <li><a href="#">Products</a></li>
-          </ul>
-        </nav>
-        <div class="ham-nav-wrap open">
-          <div class="header__menu-circle n1"></div>
-          <div class="header__menu-circle n2"></div>
-          <div class="header__menu-circle n3"></div>
-          <div class="header__menu-circle n4"></div>
-          <div class="header__menu-circle n5"></div>
-
-          <div class="ham-nav-btn"><a href="">ham</a></div>
-          <ul class="ham-nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Story</a></li>
-            <li><a href="#">Video</a></li>
-            <li><a href="#">Products</a></li>
-          </ul>
+    <div id="app">
+      <header id="header">
+        <!-- 1. 상단영역 -->
+        <header-component></header-component>
+      </header>
+      <main id="main">
+        <div class="inner">
+          <!-- 2. 컨텐츠 영역 -->
         </div>
-       </div>
-    </header>
-    <main id="main">
-      <div class="inner">
-        <!-- 2. 컨텐츠 영역 -->
-      </div>
-    </main>
-    <footer id="footer">
-      <!-- 3. 하단영역 -->
-       <div class="footer">
-        <p>@2025 All Rights Reserved.</p>
-        <p>Created by UP TEAM</p>
-       </div>
-    </footer>
+      </main>
+      <footer id="footer">
+        <!-- 3. 하단영역 -->
+        <footer-component></footer-component>
+      </footer>
+    </div>
   </body>
 </html>

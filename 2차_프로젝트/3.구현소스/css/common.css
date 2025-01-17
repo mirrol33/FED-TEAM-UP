@@ -124,12 +124,28 @@ header {
   top: -4vh;
   left: 50%;
   translate: -50% 0%;
-  transition: all 0.3s ease-out;
+  transition: all .3s ease-out;
   z-index: 2;
 }
 .ham-nav-btn.on {
   top: 4vh;
 }
+.ham-nav-btn.active {
+  top: 4vh !important;  
+}
+.ham-nav-btn.active .burger-line__top {
+  y: 7;
+  width: 43;
+  height: 2;
+  transform: matrix(0.9563, -0.29237, 0.29237, 0.9563, -1.39941, 6.63556);
+}
+.ham-nav-btn.active .burger-line__bottom {
+  y: 7;
+  width: 43;
+  height: 2;
+  transform: matrix(0.9563, 0.29237, -0.29237, 0.9563, 3.27851, -5.93636);
+}
+
 .ham-nav {
   position:absolute;
   top: 10vh;
@@ -147,6 +163,8 @@ header {
   height: 40px;
   margin: 8px;
 }
+
+
 /*********** main 컨텐츠영역 ***********/
 main {
   min-height: 1600px;

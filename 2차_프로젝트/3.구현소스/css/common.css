@@ -167,7 +167,7 @@ header {
   font-size: 3rem;
   font-weight: 700;
 }
-.ham-nav li > a > svg {
+.ham-nav li > a > img {
   height: 40px;
   margin: 8px;
 }

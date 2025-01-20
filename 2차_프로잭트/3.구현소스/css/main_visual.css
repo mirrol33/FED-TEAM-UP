@@ -34,9 +34,9 @@ body * {
     position: absolute;
     width: 30%;
     top: 20%;
-    left: 100%;
+    left: 70%;
     opacity: 0;
-    animation: up-logo-img-ani 2s ease-out 0s forwards;
+    animation: up-logo-img-ani 1s ease-out 0s forwards;
 }
 /* .up-logo-ani-cls{
     animation: up-logo-img-ani 3s ease-out 5s forwards;
@@ -45,41 +45,44 @@ body * {
 
 @keyframes up-logo-img-ani {
     to{
-        left: 60%;
+        left: 63%;
         opacity: 1;
     }
 }
 
 #main-text{
-    font-family: "Pretendard Variable", Pretendard, sans-serif;
+    font-family: "Pretendard Variable", sans-serif;
     position: absolute;
-    width: 40%;
-    top: 70%;
-    left: 100%;
-    font-size: 50px;
+    width: 35%;
+    top: 55%;
+    left: 60%;
+    font-size: 5vh;
     color: #fff;
-    text-shadow: 0 0 5px #00000085;
+    /* text-shadow: 0 0 5px #00000085; */
+    font-weight: bold;
     opacity: 0;
-    animation: up-text-ani 1s ease-out 2s forwards;
+    animation: up-text-ani 1s ease-out 0.2s forwards;
 }
 
 @keyframes up-text-ani {
     to{
-        left: 60%;
+        left: 50%;
         opacity: 1;
     }
 }
 
 
 .intro-text-box{
+    font-family: "Pretendard Variable", sans-serif;
     text-align: center;
-    padding: 5vh 0;
+    padding: 20vh 11vh;
 }
 .intro-text-box h2{
-    font-size: 50px;
+    font-weight: bold;
+    font-size: 5vh;
 }
 .intro-text-box p{
-    font-size: 25px;
+    font-size: 2vh;
     line-height: 1.8;
-    padding: 0 20vw;
+    padding: 2vw 20vw;
 }

@@ -4,7 +4,7 @@
 import myFn from "./my_function.js";
 // console.log(myFn);
 
-// 상단/하단 영역 컴포넌트 지역화 ////
+// 상단 컴포넌트 지역화 ////
 const headerComponent = {
   template: `
   <div class="header">
@@ -26,9 +26,8 @@ const headerComponent = {
       </li>
       </ul>
     </nav>
-    <div class="ham-nav-wrap open">
-      <div v-for="n in 5" class="header__menu-circle" :class="'n' + n">
-    </div>
+    <div class="ham-nav-wrap">
+      <div v-for="n in 5" class="header__menu-circle" :class="'n' + n"></div>
       <ul class="ham-nav">
         <li @mouseover="addClass" @mouseout="removeClass" v-for="(menu, idx) in menus"><a :href="menu.link">{{ menu.name }}</a></li>
         <li>
@@ -37,7 +36,7 @@ const headerComponent = {
         </li>
       </ul>
     </div>
-    </div>
+  </div>
   `,
   data: () => ({
     menus: [
@@ -47,13 +46,14 @@ const headerComponent = {
       {name: "video", link: "./video.html"},
       {name: "products", link: "./products.html"},
     ],
+    show: false,
   }),
   methods: {
     // 마우스 오버 시
     addClass(e) {
       let tg = e.currentTarget;
       tg.classList.add("on");
-      // 풍선이미지 추가
+      // 풍선SVG 추가
       let addSpan = document.createElement("span");
       addSpan.innerHTML = `<img src="./images/Balloon_icon.svg">`;
       addSpan.className = "balloon";
@@ -67,24 +67,27 @@ const headerComponent = {
       let tg = e.currentTarget;
       tg.classList.remove("on");
       let addSpan = tg.querySelector(".balloon");
-      // 풍선이미지 삭제
+      // 풍선SVG 삭제
       if (tg.querySelector(".balloon")) {
         tg.removeChild(addSpan);
       }
     },
     toggleShow() {
       this.show = !this.show;
-      const hamMenuWrap = myFn.qs(".ham-nav-wrap");
-      if(this.show){
+      if (this.show) {
+        headerMenu.classList.add("active");
         //.ham-nav-wrap 요소에 .active 클래스 추가
-        hamMenuWrap.classList.add("active");
-      }else{
+        headerMenuWrap.classList.add("active");
+      } else {
+        headerMenu.classList.remove("active");
         //.ham-nav-wrap 요소에.active 클래스 제거
-        hamMenuWrap.classList.remove("active");
+        headerMenuWrap.classList.remove("active");
       }
     },
   },
 };
+
+// 하단 컴포넌트 지역화 ////
 const footerComponent = {
   template: `
     <div class="footer">
@@ -94,6 +97,7 @@ const footerComponent = {
   `,
 };
 
+// 뷰 인스턴스 생성 ////
 new Vue({
   el: "#app",
   components: {
@@ -102,17 +106,20 @@ new Vue({
   },
 });
 
+// 햄버거 메뉴 요소 변수선언!!
 const headerMenu = myFn.qs(".ham-nav-btn");
+const headerMenuWrap = myFn.qs(".ham-nav-wrap");
+
+// 햄버거 메뉴 버튼 스크롤 이벤트!!
 let preScrollTop = 0;
 window.addEventListener("scroll", () => {
   let nextScrollTop = window.scrollY;
   // console.log('scroll',nextScrollTop);
-
   if (preScrollTop < nextScrollTop || nextScrollTop < 100) {
-    // console.log('Down!');
+    // .ham-nav-btn 요소에 스크롤 내려갈때 on 클래스 삭제
     headerMenu.classList.remove("on");
   } else {
-    // console.log('Up!');
+    // .ham-nav-btn 요소에 스크롤 내려갈때 on 클래스 삭제
     headerMenu.classList.add("on");
   }
   preScrollTop = nextScrollTop;

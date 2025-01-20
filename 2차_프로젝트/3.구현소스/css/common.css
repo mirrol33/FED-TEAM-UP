@@ -89,6 +89,9 @@ header {
   text-align: center;
   display: none;
 }
+.ham-nav-wrap.active {
+  display: block;
+}
 .header__menu-circle {
   background-color: #f3f3e9;
   width: 30vw;

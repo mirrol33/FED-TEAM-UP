@@ -23,34 +23,37 @@
 }
 .about_wrap ul .card-box {
   position: relative;
-  transform-style: preserve-3d;
   text-align: left;
   perspective: 200vw;
 }
-.about_wrap ul .card-box img {
+.about_wrap ul .card-box .card {
+  overflow: hidden;
+  border-radius: 1.8rem;
   position: absolute;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  border-radius: 1.8rem;
-  text-align: center;
+  transform-style: preserve-3d;
+}
+.about_wrap ul .card-box .card img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   vertical-align: middle;
 }
-.about_wrap ul .card-box img:first-child {
+.about_wrap ul .card-box .card:first-child {
   transform: rotateX(90deg);
   transition: 0.4s linear;
 }
-.about_wrap ul .card-box img:last-child {
+.about_wrap ul .card-box .card:last-child {
   transform: rotateX(0deg);
   transition: 0.4s 0.4s linear;
 }
-.about_wrap ul .card-box:hover img:first-child {
+.about_wrap ul .card-box:hover .card:first-child {
   transform: rotateX(0deg);
   transition: 0.4s 0.4s linear;
 }
-.about_wrap ul .card-box:hover img:last-child {
+.about_wrap ul .card-box:hover .card:last-child {
   transform: rotateX(90deg);
   transition: 0.4s linear;
 }/*# sourceMappingURL=about.css.map */

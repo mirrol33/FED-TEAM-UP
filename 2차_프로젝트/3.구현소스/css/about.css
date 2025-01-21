@@ -25,6 +25,7 @@
   position: relative;
   transform-style: preserve-3d;
   text-align: left;
+  perspective: 200vw;
 }
 .about_wrap ul .card-box img {
   position: absolute;

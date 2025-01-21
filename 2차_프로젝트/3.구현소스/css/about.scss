@@ -23,6 +23,7 @@
       position: relative;
       transform-style: preserve-3d;
       text-align: left;
+      perspective: 200vw;
       img {
         position: absolute;
         width: 100%;

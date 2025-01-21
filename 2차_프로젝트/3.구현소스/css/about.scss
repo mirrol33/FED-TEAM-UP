@@ -1,0 +1,56 @@
+.about_wrap {
+  width: 90%;
+  margin: 0 auto;
+  padding: 120px 0;
+  color: #333;
+  text-align: center;
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+  h3 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #aaa;
+  }
+  ul {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: min(1.2vw, 24px);
+    aspect-ratio: 1.2/1;
+    .card-box {
+      position: relative;
+      transform-style: preserve-3d;
+      text-align: left;
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 1.8rem;
+        text-align: center;
+        object-fit: cover;
+        vertical-align: middle;
+        &:first-child {
+          transform: rotateX(90deg);
+          transition: .4s linear;
+        }
+        &:last-child {
+          transform: rotateX(0deg);
+          transition: .4s .4s linear;
+        }
+      }
+      &:hover img {
+        &:first-child {
+          transform: rotateX(0deg);
+          transition: .4s .4s linear;
+        }
+        &:last-child {
+          transform: rotateX(90deg);
+          transition: .4s linear;
+        }
+      }
+    }
+  }
+}

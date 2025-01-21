@@ -4,6 +4,12 @@
 import myFn from "./my_function.js";
 // console.log(myFn);
 
+// 전체 요소 #app 태그로 감싸기!
+$('header, main, footer').wrapAll('<div id="app"></div>');
+// 상,하단 컴포넌트 태그 추가하기!
+myFn.qs("header").innerHTML = `<header-component></header-component>`;
+myFn.qs("footer").innerHTML = `<footer-component></footer-component>`;
+
 // 상단 컴포넌트 지역화 ////
 const headerComponent = {
   template: `
@@ -41,10 +47,10 @@ const headerComponent = {
   data: () => ({
     menus: [
       {name: "Home", link: "./"},
-      {name: "about", link: "./about.html"},
-      {name: "story", link: "./story.html"},
-      {name: "video", link: "./video.html"},
-      {name: "products", link: "./products.html"},
+      {name: "About", link: "./about.html"},
+      {name: "Story", link: "./story.html"},
+      {name: "Video", link: "./video.html"},
+      {name: "Products", link: "./products.html"},
     ],
     show: false,
   }),
@@ -124,3 +130,4 @@ window.addEventListener("scroll", () => {
   }
   preScrollTop = nextScrollTop;
 });
+

@@ -27,12 +27,32 @@
   perspective: 200vw;
 }
 .about_wrap ul .card-box .card {
-  overflow: hidden;
-  border-radius: 1.8rem;
   position: absolute;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  border-radius: 1.8rem;
   transform-style: preserve-3d;
+}
+.about_wrap ul .card-box .card span {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  color: #fff;
+  width: 100%;
+  height: min(100%, 200px);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 24px;
+  box-sizing: border-box;
+}
+.about_wrap ul .card-box .card span p {
+  font-size: min(2vw, 1rem);
+  line-height: 1.4;
+}
+.about_wrap ul .card-box .card span p b {
+  font-weight: 700;
+  font-size: min(2.4vw, 1.6rem);
+  line-height: 1.6;
 }
 .about_wrap ul .card-box .card img {
   width: 100%;

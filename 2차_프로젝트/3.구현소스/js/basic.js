@@ -5,7 +5,7 @@ import myFn from "./my_function.js";
 // console.log(myFn);
 
 // 전체 요소 #app 태그로 감싸기!
-$('header, main, footer').wrapAll('<div id="app"></div>');
+$("header, main, footer").wrapAll('<div id="app"></div>');
 // 상,하단 컴포넌트 태그 추가하기!
 myFn.qs("header").innerHTML = `<header-component></header-component>`;
 myFn.qs("footer").innerHTML = `<footer-component></footer-component>`;
@@ -110,15 +110,19 @@ new Vue({
     "header-component": headerComponent,
     "footer-component": footerComponent,
   },
+  mounted() {
+
+  },
 });
 
-// 햄버거 메뉴 요소 변수선언!!
+// 햄버거 메뉴 변수선언!!
 const headerMenu = myFn.qs(".ham-nav-btn");
 const headerMenuWrap = myFn.qs(".ham-nav-wrap");
+let preScrollTop = 0;
 
 // 햄버거 메뉴 버튼 스크롤 이벤트!!
-let preScrollTop = 0;
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", scrollFn);
+function scrollFn() {
   let nextScrollTop = window.scrollY;
   // console.log('scroll',nextScrollTop);
   if (preScrollTop < nextScrollTop || nextScrollTop < 100) {
@@ -129,5 +133,4 @@ window.addEventListener("scroll", () => {
     headerMenu.classList.add("on");
   }
   preScrollTop = nextScrollTop;
-});
-
+}

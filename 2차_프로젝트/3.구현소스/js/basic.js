@@ -110,8 +110,27 @@ new Vue({
     "header-component": headerComponent,
     "footer-component": footerComponent,
   },
+  data: () => ({
+    preScrollTop: 0,
+  }),
+  methods: {
+    // 햄버거 메뉴 스크롤 함수
+    scrollFn() {
+      let nextScrollTop = window.scrollY;
+      // console.log('scroll',nextScrollTop);
+      if (preScrollTop < nextScrollTop || nextScrollTop < 100) {
+        // .ham-nav-btn 요소에 스크롤 내려갈때 on 클래스 삭제
+        headerMenu.classList.remove("on");
+      } else {
+        // .ham-nav-btn 요소에 스크롤 올라갈때 on 클래스 추가
+        headerMenu.classList.add("on");
+      }
+      preScrollTop = nextScrollTop;
+    },
+  },
   mounted() {
-
+    // 햄버거 메뉴 스크롤 이벤트 실행
+    window.addEventListener("scroll", this.scrollFn);
   },
 });
 
@@ -120,17 +139,17 @@ const headerMenu = myFn.qs(".ham-nav-btn");
 const headerMenuWrap = myFn.qs(".ham-nav-wrap");
 let preScrollTop = 0;
 
-// 햄버거 메뉴 버튼 스크롤 이벤트!!
-window.addEventListener("scroll", scrollFn);
-function scrollFn() {
-  let nextScrollTop = window.scrollY;
-  // console.log('scroll',nextScrollTop);
-  if (preScrollTop < nextScrollTop || nextScrollTop < 100) {
-    // .ham-nav-btn 요소에 스크롤 내려갈때 on 클래스 삭제
-    headerMenu.classList.remove("on");
-  } else {
-    // .ham-nav-btn 요소에 스크롤 내려갈때 on 클래스 삭제
-    headerMenu.classList.add("on");
-  }
-  preScrollTop = nextScrollTop;
-}
+
+// window.addEventListener("scroll", scrollFn);
+// function scrollFn() {
+//   let nextScrollTop = window.scrollY;
+//   // console.log('scroll',nextScrollTop);
+//   if (preScrollTop < nextScrollTop || nextScrollTop < 100) {
+//     // .ham-nav-btn 요소에 스크롤 내려갈때 on 클래스 삭제
+//     headerMenu.classList.remove("on");
+//   } else {
+//     // .ham-nav-btn 요소에 스크롤 올라갈때 on 클래스 추가
+//     headerMenu.classList.add("on");
+//   }
+//   preScrollTop = nextScrollTop;
+// }

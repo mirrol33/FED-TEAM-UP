@@ -133,9 +133,6 @@ header {
 .ham-nav-btn.on {
   top: 4vh;
 }
-.ham-nav-btn.active {
-  top: 4vh !important;
-}
 .ham-nav-btn .burger-line__top,
 .ham-nav-btn .burger-line__bottom {
   transition: all 0.3s ease-out;

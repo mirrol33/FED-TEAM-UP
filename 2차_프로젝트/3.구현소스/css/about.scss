@@ -1,8 +1,5 @@
-$breakpoint-desktop: 1600px;
-$breakpoint-tablet-large: 1400px;
-$breakpoint-tablet-medium: 1200px;
-$breakpoint-tablet-small: 768px;
-$breakpoint-mobile: 420px;
+// 공통 미디어쿼리 SCSS 불러오기
+@import "./_core.scss";
 
 .about_wrap {
   width: 90%;
@@ -82,5 +79,11 @@ $breakpoint-mobile: 420px;
         }
       }
     }
+  }
+  @include tablet-medium {
+      ul {
+        grid-template-columns: repeat(2, 1fr);
+        aspect-ratio: 1.2/2;
+      } 
   }
 }

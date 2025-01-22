@@ -76,4 +76,10 @@
 .about_wrap ul .card-box:hover .card:last-child {
   transform: rotateX(90deg);
   transition: 0.4s linear;
+}
+@media (max-width: 1200px) {
+  .about_wrap ul {
+    grid-template-columns: repeat(2, 1fr);
+    aspect-ratio: 1.2/2;
+  }
 }/*# sourceMappingURL=about.css.map */

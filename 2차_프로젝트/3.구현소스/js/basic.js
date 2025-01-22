@@ -6,11 +6,12 @@ import myFn from "./my_function.js";
 
 // 전체 요소 #app 태그로 감싸기!
 $("header, main, footer").wrapAll('<div id="app"></div>');
+
 // 상,하단 컴포넌트 태그 추가하기!
 myFn.qs("header").innerHTML = `<header-component></header-component>`;
 myFn.qs("footer").innerHTML = `<footer-component></footer-component>`;
 
-// 상단 컴포넌트 지역화 ////
+// 상단 컴포넌트 ////
 const headerComponent = {
   template: `
   <div class="header">
@@ -18,9 +19,9 @@ const headerComponent = {
       <h1><a href="./"><img src="./images/logo.png" alt="logo" /></a></h1>
       <div @click="toggleShow" class="ham-nav-btn">
         <a href="#none">
-        <svg data-v-f0103df8="" width="43" height="16" viewBox="0 0 43 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect data-v-f0103df8="" y="4" width="43" height="2" fill="#333" class="burger-line__top"></rect>
-        <rect data-v-f0103df8="" y="10" width="43" height="2" fill="#333" class="burger-line__bottom"></rect>
+        <svg width="43" height="16" viewBox="0 0 43 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect y="4" width="43" height="2" fill="#333" class="burger-line__top"></rect>
+        <rect y="10" width="43" height="2" fill="#333" class="burger-line__bottom"></rect>
         </svg>
         </a>
       </div>
@@ -45,6 +46,7 @@ const headerComponent = {
   </div>
   `,
   data: () => ({
+    // 메뉴 리스트
     menus: [
       {name: "Home", link: "./"},
       {name: "About", link: "./about.html"},
@@ -52,19 +54,22 @@ const headerComponent = {
       {name: "Video", link: "./video.html"},
       {name: "Products", link: "./products.html"},
     ],
+    // 햄버거 메뉴 토글 상태
     show: false,
+    // 햄버거 메뉴 스크롤 위치
+    preScrollTop: 0,
   }),
   methods: {
     // 마우스 오버 시
     addClass(e) {
       let tg = e.currentTarget;
       tg.classList.add("on");
-      // 풍선SVG 추가
+      // 풍선요소 추가
       let addSpan = document.createElement("span");
       addSpan.innerHTML = `<img src="./images/Balloon_icon.svg">`;
       addSpan.className = "balloon";
-      // 만약 .balloon 가 존재하면 추가 안함!
-      if (!tg.querySelector(".balloon")) {
+      // 만약 풍선(.balloon) 존재하면 추가 안함!
+      if (!tg.myFn.qs(".balloon")) {
         tg.appendChild(addSpan);
       }
     },
@@ -72,12 +77,13 @@ const headerComponent = {
     removeClass(e) {
       let tg = e.currentTarget;
       tg.classList.remove("on");
-      let addSpan = tg.querySelector(".balloon");
-      // 풍선SVG 삭제
-      if (tg.querySelector(".balloon")) {
+      let addSpan = tg.myFn.qs(".balloon");
+      // 풍선요소 삭제
+      if (tg.myFn.qs(".balloon")) {
         tg.removeChild(addSpan);
       }
     },
+    // 햄버거 메뉴 토글 함수
     toggleShow() {
       this.show = !this.show;
       if (this.show) {
@@ -90,10 +96,27 @@ const headerComponent = {
         headerMenuWrap.classList.remove("active");
       }
     },
+    // 햄버거 메뉴 스크롤 함수
+    scrollFn() {
+      let nextScrollTop = window.scrollY;
+      // console.log('scroll',nextScrollTop);
+      if (this.preScrollTop < nextScrollTop || nextScrollTop < 100) {
+        // .ham-nav-btn 요소에 스크롤 내려갈때 on 클래스 삭제
+        headerMenu.classList.remove("on");
+      } else {
+        // .ham-nav-btn 요소에 스크롤 올라갈때 on 클래스 추가
+        headerMenu.classList.add("on");
+      }
+      this.preScrollTop = nextScrollTop;
+    },
   },
+  mounted() {
+    // 햄버거 메뉴 스크롤 이벤트 실행
+    window.addEventListener("scroll", this.scrollFn);
+  }
 };
 
-// 하단 컴포넌트 지역화 ////
+// 하단 컴포넌트 ////
 const footerComponent = {
   template: `
     <div class="footer">
@@ -110,46 +133,11 @@ new Vue({
     "header-component": headerComponent,
     "footer-component": footerComponent,
   },
-  data: () => ({
-    preScrollTop: 0,
-  }),
-  methods: {
-    // 햄버거 메뉴 스크롤 함수
-    scrollFn() {
-      let nextScrollTop = window.scrollY;
-      // console.log('scroll',nextScrollTop);
-      if (preScrollTop < nextScrollTop || nextScrollTop < 100) {
-        // .ham-nav-btn 요소에 스크롤 내려갈때 on 클래스 삭제
-        headerMenu.classList.remove("on");
-      } else {
-        // .ham-nav-btn 요소에 스크롤 올라갈때 on 클래스 추가
-        headerMenu.classList.add("on");
-      }
-      preScrollTop = nextScrollTop;
-    },
-  },
-  mounted() {
-    // 햄버거 메뉴 스크롤 이벤트 실행
-    window.addEventListener("scroll", this.scrollFn);
-  },
+  // data: () => ({}),
+  // methods: {},
+  // mounted() {},
 });
 
-// 햄버거 메뉴 변수선언!!
-const headerMenu = myFn.qs(".ham-nav-btn");
+// 햄버거 메뉴 대상
 const headerMenuWrap = myFn.qs(".ham-nav-wrap");
-let preScrollTop = 0;
-
-
-// window.addEventListener("scroll", scrollFn);
-// function scrollFn() {
-//   let nextScrollTop = window.scrollY;
-//   // console.log('scroll',nextScrollTop);
-//   if (preScrollTop < nextScrollTop || nextScrollTop < 100) {
-//     // .ham-nav-btn 요소에 스크롤 내려갈때 on 클래스 삭제
-//     headerMenu.classList.remove("on");
-//   } else {
-//     // .ham-nav-btn 요소에 스크롤 올라갈때 on 클래스 추가
-//     headerMenu.classList.add("on");
-//   }
-//   preScrollTop = nextScrollTop;
-// }
+const headerMenu = myFn.qs(".ham-nav-btn");

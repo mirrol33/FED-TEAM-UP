@@ -69,7 +69,7 @@ const headerComponent = {
       addSpan.innerHTML = `<img src="./images/Balloon_icon.svg">`;
       addSpan.className = "balloon";
       // 만약 풍선(.balloon) 존재하면 추가 안함!
-      if (!tg.myFn.qs(".balloon")) {
+      if (!tg.querySelector(".balloon")) {
         tg.appendChild(addSpan);
       }
     },
@@ -77,9 +77,9 @@ const headerComponent = {
     removeClass(e) {
       let tg = e.currentTarget;
       tg.classList.remove("on");
-      let addSpan = tg.myFn.qs(".balloon");
+      let addSpan = tg.querySelector(".balloon");
       // 풍선요소 삭제
-      if (tg.myFn.qs(".balloon")) {
+      if (tg.querySelector(".balloon")) {
         tg.removeChild(addSpan);
       }
     },

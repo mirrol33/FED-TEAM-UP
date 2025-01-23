@@ -10,7 +10,7 @@
     font-weight: 400;
   }
   h3 {
-    font-size: 4rem;
+    font-size: min(8vw, 4rem);
     font-weight: 700;
     color: #aaa;
   }
@@ -41,10 +41,10 @@
           background: rgba(0, 0, 0, 0.4);
           padding: 24px;
           box-sizing: border-box;
-          p{
+          p {
             font-size: min(2vw, 1rem);
             line-height: 1.4;
-            b{
+            b {
               font-weight: 700;
               font-size: min(2.4vw, 1.6rem);
               line-height: 1.6;
@@ -59,32 +59,44 @@
         }
         &:first-child {
           transform: rotateX(90deg);
-          transition: .4s linear;
+          transition: 0.4s linear;
         }
         &:last-child {
           transform: rotateX(0deg);
-          transition: .4s .4s linear;
+          transition: 0.4s 0.4s linear;
         }
       }
       &:hover .card {
         &:first-child {
           transform: rotateX(0deg);
-          transition: .4s .4s linear;
+          transition: 0.4s 0.4s linear;
         }
         &:last-child {
           transform: rotateX(90deg);
-          transition: .4s linear;
+          transition: 0.4s linear;
         }
       }
     }
   }
   @include tablet-medium {
-      ul {
-        grid-template-columns: repeat(2, 1fr);
-        aspect-ratio: 1.2/2;
-        .card-box .card span {
-          padding: 12px;
+    ul {
+      grid-template-columns: repeat(2, 1fr);
+      aspect-ratio: 1.2/2;
+    }
+  }
+  @include tablet-small {
+    ul {
+      grid-template-columns: 1fr;
+      aspect-ratio: 1/6;
+      .card-box .card span {
+        padding: 20px;
+        p {
+          font-size: min(4vw, 1rem);
+          b {
+            font-size: min(5vw, 1.4rem);
+          }
         }
-      } 
+      }
+    }
   }
 }

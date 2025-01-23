@@ -14,7 +14,7 @@
   font-weight: 400;
 }
 .about-wrap h3 {
-  font-size: 4rem;
+  font-size: min(8vw, 4rem);
   font-weight: 700;
   color: #aaa;
 }
@@ -86,7 +86,19 @@
     grid-template-columns: repeat(2, 1fr);
     aspect-ratio: 1.2/2;
   }
+}
+@media (max-width: 768px) {
+  .about-wrap ul {
+    grid-template-columns: 1fr;
+    aspect-ratio: 1/6;
+  }
   .about-wrap ul .card-box .card span {
-    padding: 12px;
+    padding: 20px;
+  }
+  .about-wrap ul .card-box .card span p {
+    font-size: min(4vw, 1rem);
+  }
+  .about-wrap ul .card-box .card span p b {
+    font-size: min(5vw, 1.4rem);
   }
 }/*# sourceMappingURL=basic.css.map */

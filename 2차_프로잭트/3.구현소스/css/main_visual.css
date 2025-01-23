@@ -125,7 +125,7 @@
 /* 캐릭터 이름 */
 .card h3 {
   padding-top: 2vh;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   color: #fff;
   font-weight: bold;
   padding-left: 3vh;
@@ -137,7 +137,7 @@
 .card p {
   color: #fff;
   text-align: left;
-  font-size: 2rem;
+  font-size: 2em;
   padding-left: 3vh;
   padding-right: 3vh;
   font-weight: bold;

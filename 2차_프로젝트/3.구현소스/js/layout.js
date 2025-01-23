@@ -73,8 +73,8 @@ const headerComponent = {
     // 햄버거 메뉴 토글 함수
     toggleShow() {
       this.show = !this.show;
-      const headerMenuWrap = myFn.qs(".ham-nav-wrap");
-      const headerMenu = myFn.qs(".ham-nav-btn");
+      const headerMenuWrap = document.querySelector(".ham-nav-wrap");
+      const headerMenu = document.querySelector(".ham-nav-btn");
       if (this.show) {
         // 요소에 .active 클래스 추가
         headerMenu.classList.add("active");
@@ -87,7 +87,7 @@ const headerComponent = {
     },
     // 햄버거 메뉴 스크롤 함수
     scrollFn() {
-      const headerMenu = myFn.qs(".ham-nav-btn");
+      const headerMenu = document.querySelector(".ham-nav-btn");
       let nextScrollTop = window.scrollY;
       // console.log('scroll',nextScrollTop);
       if (this.preScrollTop < nextScrollTop || nextScrollTop < 100) {

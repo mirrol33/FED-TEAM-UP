@@ -102,37 +102,54 @@ body * {
 /* 카드 영역 */
 .character-card-area {
   display: flex;
-  gap: -10vw;
-  height: 400vh;
+  /* gap: -10vw; */
+  height: 500vh;
   background-color: var(--color-site-bg);
+  justify-content: center;
 }
 /* 카드 기본설정 */
 .card {
   position: sticky;
-  top: 10vh;
+  top: 15vh;
   bottom: 20vh;
-  width: 20vw;
-  height: 550px;
+  width: 23vw;
+  height: 65vh;
   background-color: var(--color-primary);
-  box-shadow: -100px 100px 20px #00000082;
+  box-shadow: -7px 5px 20px #0000002e;
+  border-radius: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card p{
+  text-align: left;
 }
 
 /* 첫번째 카드 */
 .card:nth-child(1) {
-    margin-top: 20vh
+  margin-top: 20vh;
+  rotate: 10deg;
+  background-image: url(../이미지/칼/carl15.jpg);
 }
 
 /* 두번째 카드 */
 .card:nth-child(2) {
-    margin-top: 120vh
+  margin-top: 120vh;
+  rotate: -15deg;
+  background-image: url(../이미지/러셀/russell12.jpg);
 }
 
 /* 세번째 카드 */
 .card:nth-child(3) {
-    margin-top: 220vh
+  margin-top: 220vh;
+  rotate: 3deg;
+  background-image: url(../이미지/도그/dug9.jpg);
 }
 
 /* 네번째 카드 */
 .card:nth-child(4) {
-    margin-top: 320vh
+  margin-top: 320vh;
+  rotate: 14deg;
+  background-image: url(../이미지/캐빈/kevin13.jpg);
 }

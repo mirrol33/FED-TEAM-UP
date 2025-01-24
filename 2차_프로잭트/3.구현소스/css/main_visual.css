@@ -101,7 +101,7 @@
 /********************* 캐릭터카드 영역 *********************/
 /* 카드 영역 */
 .character-card-area {
-  display: flex;
+  /* display: flex; */
   /* gap: -10vw; */
   height: 500vh;
   background-color: var(--color-site-bg);
@@ -111,35 +111,52 @@
 .card {
   position: sticky;
   top: 15vh;
-  bottom: 20vh;
+  float: left;
+  /* bottom: 20vh; */
   width: 23vw;
-  height: 65vh;
+  aspect-ratio: .6;
+  flex-basis: auto;
   background-color: var(--color-primary);
   box-shadow: -7px 5px 10px #00000052;
   border-radius: 20px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
 }
+/* 카드속박스 */
+.in-card{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 2/1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 
 /* 캐릭터 이름 */
 .card h3 {
   padding-top: 2vh;
-  font-size: 1.5em;
+  font-size: 2vw;
   color: #fff;
   font-weight: bold;
-  padding-left: 3vh;
-  padding-right: 3vh;
+  text-align: center;
+  /* padding-left: 3vh;
+  padding-right: 3vh; */
   text-shadow: 0px 5px 5px #0000007a;
 }
 
 /* 캐릭터 명대사 */
 .card p {
+  margin-top: auto;
   color: #fff;
   text-align: left;
-  font-size: 2em;
+  font-size: 2.4vw;
   padding-left: 3vh;
   padding-right: 3vh;
+  padding-bottom: 2vh;
   font-weight: bold;
   text-shadow: 0px 5px 5px #0000007a;
 }
@@ -150,9 +167,9 @@
   rotate: 10deg;
   background-image: url(../이미지/칼/carl15.jpg);
 }
-.card:nth-child(1) p {
+/* .card:nth-child(1) p {
   padding-top: 45vh;
-}
+} */
 
 /* 두번째 카드 */
 .card:nth-child(2) {
@@ -160,9 +177,9 @@
   rotate: -15deg;
   background-image: url(../이미지/러셀/russell12.jpg);
 }
-.card:nth-child(2) p {
+/* .card:nth-child(2) p {
   padding-top: 41vh;
-}
+} */
 
 /* 세번째 카드 */
 .card:nth-child(3) {
@@ -170,16 +187,39 @@
   rotate: 3deg;
   background-image: url(../이미지/도그/dug9.jpg);
 }
-.card:nth-child(3) p {
+/* .card:nth-child(3) p {
   padding-top: 45vh;
-}
+} */
 
 /* 네번째 카드 */
 .card:nth-child(4) {
   margin-top: 320vh;
   rotate: 14deg;
+  background-position: 60% 20%;
   background-image: url(../이미지/캐빈/kevin13.jpg);
 }
-.card:nth-child(4) p {
+/* .card:nth-child(4) p {
   padding-top: 52vh;
+} */
+
+
+@media screen and (max-width: 800px) {
+
+  .card{
+    
+  width: 48vw;
+  }
+
+
+  
+/* 세번째 카드 */
+.card:nth-child(3) {
+  top: 30vh;
+  margin-top: 260vh;
+}
+
+/* 네번째 카드 */
+.card:nth-child(4) {
+  margin-top: 260vh;
+}
 }

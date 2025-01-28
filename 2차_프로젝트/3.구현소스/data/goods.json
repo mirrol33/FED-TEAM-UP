@@ -1,0 +1,162 @@
+[
+  {
+    "id": "1",
+    "cate": "인형",
+    "name": "Dug Plush Up Medium 12",
+    "price": 50000,
+    "sale": 40000,
+    "simple": "상품 설명글1"
+  },
+  {
+    "id": "2",
+    "cate": ["인형", "피규어"],
+    "name": "Up Deluxe Figure Play Set",
+    "price": 20000,
+    "sale": 10000,
+    "simple": "상품 설명글2"
+  },
+  {
+    "id": "3",
+    "cate": ["피규어", "기타"],
+    "name": "LEGO Up House 43217 Disney100",
+    "price": 30000,
+    "sale": 20000,
+    "simple": "상품 설명글3"
+  },
+  {
+    "id": "4",
+    "cate": "의류",
+    "name": "Up Fashion T-Shirt for Kids",
+    "price": 20000,
+    "sale": 10000,
+    "simple": "상품 설명글4"
+  },
+  {
+    "id": "5",
+    "cate": "악세서리",
+    "name": "Up ''Adventure Is Out There'' Necklace",
+    "price": 40000,
+    "sale": 30000,
+    "simple": "상품 설명글5"
+  },
+  {
+    "id": "6",
+    "cate": "기타",
+    "name": "Grape Soda Water Bottle with Straw Up",
+    "price": 20000,
+    "sale": 20000,
+    "simple": "상품 설명글6"
+  },
+  {
+    "id": "7",
+    "cate": "악세서리",
+    "name": "Carl Fredricksen and Ellie Charm by Pandora",
+    "price": 10000,
+    "sale": 10000,
+    "simple": "상품 설명글7"
+  },
+  {
+    "id": "8",
+    "cate": "악세서리",
+    "name": "Carl Fredricksen and Ellie Charm by Pandora",
+    "price": 20000,
+    "sale": 10000,
+    "simple": "상품 설명글8"
+  },
+  {
+    "id": "9",
+    "cate": "악세서리",
+    "name": "Carl Fredricksen and Ellie Charm by Pandora",
+    "price": 10000,
+    "sale": 10000,
+    "simple": "상품 설명글9"
+  },
+  {
+    "id": "10",
+    "cate": "기타",
+    "name": "Up ''Adventure Awaits'' Canvas Artwork by Michelle St.Laurent",
+    "price": 20000,
+    "sale": 10000,
+    "simple": "상품 설명글10"
+  },
+  {
+    "id": "11",
+    "cate": "의류",
+    "name": "Up Fashion T-Shirt for Kids",
+    "price": 10000,
+    "sale": 10000,
+    "simple": "상품 설명글11"
+  },
+  {
+    "id": "12",
+    "cate": "악세서리",
+    "name": "Up House Bracelet",
+    "price": 20000,
+    "sale": 20000,
+    "simple": "상품 설명글12"
+  },
+  {
+    "id": "13",
+    "cate": ["악세서리", "의류"],
+    "name": "Up Basket Tote",
+    "price": 30000,
+    "sale": 10000,
+    "simple": "상품 설명글13"
+  },
+  {
+    "id": "14",
+    "cate": "기타",
+    "name": "Up It Takes Two Gallery Wrapped Canvas by Tom Matousek",
+    "price": 20000,
+    "sale": 10000,
+    "simple": "상품 설명글14"
+  },
+  {
+    "id": "15",
+    "cate": "기타",
+    "name": "Up It Takes Two Gallery Wrapped Canvas by Tom Matousek",
+    "price": 40000,
+    "sale": 10000,
+    "simple": "상품 설명글15"
+  },
+  {
+    "id": "16",
+    "cate": "악세서리",
+    "name": "Up House MagicBand+",
+    "price": 50000,
+    "sale": 30000,
+    "simple": "상품 설명글16"
+  },
+  {
+    "id": "17",
+    "cate": "악세서리",
+    "name": "Up House Earrings by Rebecca Hook",
+    "price": 20000,
+    "sale": 10000,
+    "simple": "상품 설명글17"
+  },
+  {
+    "id": "18",
+    "cate": "기타",
+    "name": "Up Journey to Paradise Falls Giclée on Canvas by Tim Rogerson",
+    "price": 20000,
+    "sale": 10000,
+    "simple": "상품 설명글18"
+  },
+  {
+    "id": "19",
+    "cate": "기타",
+    "name": "Up Disney Gift Card",
+    "price": 10000,
+    "sale": 10000,
+    "simple": "상품 설명글19"
+  },
+  {
+    "id": "20",
+    "cate": "피규어",
+    "name": "Up Levitating House Figure by Grand Jester Studios",
+    "price": 30000,
+    "sale": 20000,
+    "simple": "상품 설명글20"
+  }
+]

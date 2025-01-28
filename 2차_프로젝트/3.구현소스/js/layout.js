@@ -103,6 +103,10 @@ const headerComponent = {
   mounted() {
     // 햄버거 메뉴 스크롤 이벤트 실행
     window.addEventListener("scroll", this.scrollFn);
+    // 폰트어썸 CSS 추가
+    $("head").append(`
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+      `);
   },
 };
 

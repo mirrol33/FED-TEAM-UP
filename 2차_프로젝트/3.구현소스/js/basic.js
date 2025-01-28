@@ -6,6 +6,7 @@ import myFn from "./my_function.js";
 // 컴포넌트 불러오기
 import { headerComponent, footerComponent } from "./layout.js";
 import aboutComp from "./about.js";
+import proComp from "./products.js";
 
 // 전체 요소 #app 태그로 감싸기!
 $("header, main, footer").wrapAll('<div id="app"></div>');
@@ -21,6 +22,7 @@ new Vue({
     "header-component": headerComponent,
     "footer-component": footerComponent,
     "about-component": aboutComp,
+    "products-component": proComp,
   },
   // data: () => ({}),
   // methods: {},

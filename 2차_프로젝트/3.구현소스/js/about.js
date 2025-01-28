@@ -8,7 +8,7 @@ const aboutComponent = {
         <!-- 카드 리스트 영역 -->
         <li v-for="(v, i) in charData" :key="i" class="card-box">
           <div class="card actor">
-            <img :src="'./images/card_actor_' + v.actor.id + '.jpg'" :alt="v.actor.name" />
+            <img :src="'./images/about/card_actor_' + v.actor.id + '.jpg'" :alt="v.actor.name" />
             <span>
               <p><b>{{ v.actor.name }} ({{ v.actor.name_en }})</b></p>
               <p>{{ v.name_en }} Voice actor</p>
@@ -16,7 +16,7 @@ const aboutComponent = {
             </span>
           </div>
           <div class="card char">
-            <img :src="'./images/card_char_' + v.id + '.jpg'" :alt="v.name" />
+            <img :src="'./images/about/card_char_' + v.id + '.jpg'" :alt="v.name" />
             <span>
               <p><b>{{ v.name }} ({{ v.name_en }})</b></p>
               <p>{{ v.txt }}</p>

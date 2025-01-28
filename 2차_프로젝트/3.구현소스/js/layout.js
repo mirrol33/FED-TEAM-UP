@@ -3,7 +3,7 @@ const headerComponent = {
   template: `
   <div class="header">
     <div class="inner">
-      <h1><a href="./"><img src="./images/logo.png" alt="logo" /></a></h1>
+      <h1><a href="./"><img src="./images/layout/logo.png" alt="logo" /></a></h1>
       <div @click="toggleShow" class="ham-nav-btn">
         <a href="#none">
         <svg width="43" height="16" viewBox="0 0 43 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,8 +25,8 @@ const headerComponent = {
       <ul class="ham-nav">
         <li @mouseover="addClass" @mouseout="removeClass" v-for="(menu, idx) in menus"><a :href="menu.link">{{ menu.name }}</a></li>
         <li>
-          <a href="https://www.youtube.com/@pixar"><img src="./images/youtube_icon.svg"></a>
-          <a href="https://www.instagram.com/pixar"><img src="./images/instagram_icon.svg"></a>
+          <a href="https://www.youtube.com/@pixar"><img src="./images/layout/youtube_icon.svg"></a>
+          <a href="https://www.instagram.com/pixar"><img src="./images/layout/instagram_icon.svg"></a>
         </li>
       </ul>
     </div>
@@ -53,7 +53,7 @@ const headerComponent = {
       tg.classList.add("on");
       // 풍선요소 추가
       let addSpan = document.createElement("span");
-      addSpan.innerHTML = `<img src="./images/Balloon_icon.svg">`;
+      addSpan.innerHTML = `<img src="./images/layout/Balloon_icon.svg">`;
       addSpan.className = "balloon";
       // 만약 풍선(.balloon) 존재하면 추가 안함!
       if (!tg.querySelector(".balloon")) {

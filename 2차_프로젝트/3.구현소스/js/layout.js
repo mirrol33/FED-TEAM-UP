@@ -60,8 +60,8 @@ const headerComponent = {
       {name: "Video", link: "./video.html"},
       {name: "Products", link: "./products.html"},
     ],
-    // 추가가 메뉴 데이터 : 키는 메뉴, 값은 폰트어썸 클래스
-    addMenu: {
+    // 회원메뉴 데이터 : 키는 메뉴, 값은 폰트어썸 클래스
+    addMenu: {  
       로그인: "fa-solid fa-right-to-bracket",
       로그아웃: "fa-solid fa-right-from-bracket",
       회원가입: "fa-solid fa-user",
@@ -125,7 +125,28 @@ const headerComponent = {
       }
       this.preScrollTop = nextScrollTop;
     },
-  },
+    // 회원메뉴 링크이동 함수 : goPage
+    goPage(gubun) {
+      // gubun - 구분키(키명)
+      console.log(gubun);
+      // 페이지명 셋팅변수
+      let pgName;
+      // 구분키별 분기
+      switch (gubun) {
+        case "로그인":
+          pgName = "login";
+          break;
+        case "회원가입":
+          pgName = "member";
+          break;
+        case "장바구니":
+          pgName = "cart_list";
+          break;
+      } /// switch ///
+      // 페이지 이동하기 //
+      location.href = pgName + ".html";
+    }, /// goPage 메서드 ///
+  }, //// methods ////
   mounted() {
     // 햄버거 메뉴 스크롤 이벤트 실행
     window.addEventListener("scroll", this.scrollFn);

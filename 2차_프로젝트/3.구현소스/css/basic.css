@@ -8,12 +8,17 @@
 */
 /************ header 상단영역 ************/
 header {
+  position: absolute;
+  width: 100%;
+  margin: 4vh auto !important;
+  /* 추가 회원메뉴 */
+}
+header .header {
   position: relative;
-  margin: 4vh auto;
+  margin: 0 auto;
   width: 90%;
   text-transform: uppercase;
   z-index: 1;
-  /* 추가 회원메뉴 */
 }
 header .header h1 {
   position: absolute;
@@ -44,7 +49,7 @@ header .header-menu ul {
   gap: 40px;
 }
 header .header-menu a {
-  color: var(--color-font-sub);
+  color: #333;
   font-size: min(1.8vw, 1.2rem);
   font-weight: 600;
 }
@@ -52,7 +57,7 @@ header .header-menu li {
   position: relative;
 }
 header .header-menu li a::after {
-  background-color: var(--color-font-sub);
+  background-color: #333;
   content: "";
   height: 1px;
   min-width: 0%;
@@ -214,8 +219,7 @@ main {
 
 /*********** footer 하단영역 ***********/
 footer {
-  border-top: 1px solid var(--color-quaternary);
-  background-color: var(--color-site-bg);
+  background-color: #333;
 }
 footer .footer {
   margin: 0 auto;
@@ -231,7 +235,7 @@ footer .footer {
   }
 }
 footer .footer p {
-  color: var(--color-font-sub);
+  color: #fff;
   font-size: min(4vw, 1.6rem);
   font-weight: 700;
 }

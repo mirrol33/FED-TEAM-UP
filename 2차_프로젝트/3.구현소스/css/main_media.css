@@ -1,0 +1,59 @@
+/* 메인 비주얼 페이지 미디어쿼리 CSS - main_media.css */
+
+@media screen and (max-width: 800px) {
+
+/********************************* 캐릭터 디자인 영역 *********************************/
+
+
+
+/********************************* 영화 설명 영역 *********************************/
+
+.intro-text-box h2 {
+    font-size: 4vw;
+}
+
+.intro-text-box p {
+    padding: 10vw 12vw;
+}
+
+/********************************* 캐릭터 디자인 영역 *********************************/
+  .character-card-area {
+    padding-left: 23vw;
+    height: 800vh;
+  }
+  .card {
+    width: 50vw;
+    /* top: 5vh; */
+  }
+
+  .card h3 {
+    font-size: 2vw;
+  }
+
+  .card p{
+    font-size: 4vw;
+  }
+
+  /* 첫번째 카드 */
+  .card:nth-child(1) {
+    top: 5vh;
+  }
+
+  /* 두번째 카드 */
+  .card:nth-child(2) {
+    margin-top: 80vh;
+    top: 15vh;
+  }
+
+  /* 세번째 카드 */
+  .card:nth-child(3) {
+    margin-top: 150vh;
+    top: 25vh;
+  }
+
+  /* 네번째 카드 */
+  .card:nth-child(4) {
+    margin-top: 200vh;
+    top: 35vh;
+  }
+}

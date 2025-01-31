@@ -1,6 +1,11 @@
 @charset "UTF-8";
 /* 기본 SCSS */
 /* _core.scss */
+/* 
+모바일 버전에서 호버효과 없애기
+디바이스 pointer로 hover가 가능한 경우에만 스타일을 적용
+반대로는 @media (hover: none) {} 
+*/
 /************ header 상단영역 ************/
 header {
   position: relative;
@@ -231,7 +236,6 @@ footer .footer p {
   font-weight: 700;
 }
 
-/*********** hover effect ***********/
 /* _about.scss */
 .about-wrap {
   width: 90%;

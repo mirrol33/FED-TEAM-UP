@@ -127,13 +127,13 @@
   margin-top: 20px;
 }
 .products-wrap .categories button {
-  padding: 0.4vw 1vw;
+  padding: min(1.4vw, 10px);
   border: none;
   border-radius: 4vw;
   cursor: pointer;
   background-color: #333;
   color: #fff;
-  font-size: min(4vw, 1rem);
+  font-size: min(3.8vw, 1rem);
 }
 .products-wrap .product-list {
   margin-top: 20px;
@@ -161,7 +161,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: min(2vw, 1rem);
+  font-size: min(3vw, 1rem);
   padding-top: 8px;
 }
 .products-wrap .product-list .product-box a p {
@@ -171,7 +171,7 @@
   padding-bottom: 4px;
 }
 .products-wrap .product-list .product-box a span {
-  font-size: min(1.8vw, 0.8rem);
+  font-size: min(2.8vw, 0.8rem);
   font-weight: 700;
   padding-top: 4px;
   display: block;
@@ -204,5 +204,8 @@
   .products-wrap .product-list {
     grid-template-columns: repeat(2, 1fr);
     gap: 2vw;
+  }
+  .products-wrap .product-list .product-box a p {
+    display: none;
   }
 }/*# sourceMappingURL=basic.css.map */

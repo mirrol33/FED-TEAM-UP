@@ -1,19 +1,24 @@
 /************ header 상단영역 ************/
 header {
-  position: relative;
-  margin: 4vh auto;
-  width: 90%;
-  text-transform: uppercase;
-  z-index: 1;
-  .header h1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: min(20vw, 160px);
-    height: auto;
-    img {
-      width: 100%;
+  position: absolute;
+  width: 100%;
+  margin: 4vh auto !important;
+  .header {
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    text-transform: uppercase;
+    z-index: 1;
+    h1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: min(20vw, 160px);
       height: auto;
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
   .header-menu {
@@ -31,14 +36,14 @@ header {
       gap: 40px;
     }
     a {
-      color: var(--color-font-sub);
+      color: #333;
       font-size: min(1.8vw, 1.2rem);
       font-weight: 600;
     }
     li {
       position: relative;
       a::after {
-        background-color: var(--color-font-sub);
+        background-color: #333;
         content: "";
         height: 1px;
         min-width: 0%;
@@ -204,8 +209,7 @@ main {
 
 /*********** footer 하단영역 ***********/
 footer {
-  border-top: 1px solid var(--color-quaternary);
-  background-color: var(--color-site-bg);
+  background-color: #333;
   .footer {
     margin: 0 auto;
     width: 90%;
@@ -218,7 +222,7 @@ footer {
     }
   }
   .footer p {
-    color: var(--color-font-sub);
+    color: #fff;
     font-size: min(4vw, 1.6rem);
     font-weight: 700;
   }

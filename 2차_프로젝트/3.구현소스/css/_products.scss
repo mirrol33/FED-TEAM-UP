@@ -46,6 +46,7 @@
         border-radius: 4%;
         box-sizing: border-box;
         overflow: hidden;
+        cursor: default; // 마우스 커서 변경
         h3 {
           // 한줄이상 말줄임
           display: -webkit-box;

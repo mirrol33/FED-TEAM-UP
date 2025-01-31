@@ -20,6 +20,25 @@ const headerComponent = {
       </li>
       </ul>
     </nav>
+    <nav class="add-menu">
+      <ol>
+        <li 
+        v-for="
+          (v,k) in this.addMenu
+          /* v - 객체값, k - 키명 */
+        "
+        :class="
+          // 키명이 '로그아웃'이면 'hide' 클래스넣기
+          k=='로그아웃' ? 'hide' : ''
+        ">
+          <a href="#"
+          @click.prevent="goPage(k)"
+          >
+          <i :class="v" :title="k"></i>
+          </a>
+        </li>
+      </ol>
+    </nav>
     <div class="ham-nav-wrap">
       <div v-for="n in 5" class="header__menu-circle" :class="'n' + n"></div>
       <ul class="ham-nav">
@@ -41,6 +60,13 @@ const headerComponent = {
       {name: "Video", link: "./video.html"},
       {name: "Products", link: "./products.html"},
     ],
+    // 추가가 메뉴 데이터 : 키는 메뉴, 값은 폰트어썸 클래스
+    addMenu: {
+      로그인: "fa-solid fa-right-to-bracket",
+      로그아웃: "fa-solid fa-right-from-bracket",
+      회원가입: "fa-solid fa-user",
+      장바구니: "fa-solid fa-cart-shopping",
+    },
     // 햄버거 메뉴 토글 상태
     show: false,
     // 햄버거 메뉴 스크롤 위치

@@ -203,6 +203,20 @@ header {
     transform: translateY(10%);
   }
 }
+/* 추가 회원메뉴 */
+.add-menu {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+.add-menu ol {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.add-menu li.hide {
+  display: none;
+}
 
 /*********** main 컨텐츠영역 ***********/
 main {

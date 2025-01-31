@@ -385,6 +385,7 @@ footer .footer p {
   border-radius: 4%;
   box-sizing: border-box;
   overflow: hidden;
+  cursor: default;
 }
 .products-wrap .product-list .product-box a h3 {
   display: -webkit-box;

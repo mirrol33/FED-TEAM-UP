@@ -8,7 +8,6 @@ body {
   font-family: "Pretendard Variable", Pretendard, sans-serif;
   font-size: 16px;
   line-height: normal;
-  overflow-x: hidden;
 }
 
 /* root */
@@ -20,7 +19,6 @@ body {
   --color-quaternary: #eee;
   /* 폰트색 */
   --color-font-main: #111;
-  --color-font-sub: #333;
   /* 배경색 */
   --color-site-bg: hsla(60, 10%, 96.08%, 1);
 }

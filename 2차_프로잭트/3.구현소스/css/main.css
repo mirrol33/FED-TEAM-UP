@@ -7,6 +7,13 @@
   outline: 1px dashed red;
 } */
 
+/* 웹사이트 세로축 스크롤 숨기기 */
+html, body{
+  /* overflow-x: hidden; */
+  /* overflow-y: hidden; */
+  /* box-sizing: border-box; */
+}
+
 /******************* 메인배너 구역 *******************/
 .main-visual-page {
   position: relative;
@@ -106,15 +113,17 @@
   height: 500vh;
   background-color: var(--color-site-bg);
   justify-content: center;
+  padding-left: 5vw;
+
 }
 /* 카드 기본설정 */
 .card {
   position: sticky;
-  top: 15vh;
+  top: 10vh;
   float: left;
   /* bottom: 20vh; */
-  width: 23vw;
-  aspect-ratio: .6;
+  width: 22vw;
+  aspect-ratio: 0.6;
   flex-basis: auto;
   background-color: var(--color-primary);
   box-shadow: -7px 5px 10px #00000052;
@@ -124,7 +133,7 @@
   background-position: top;
 }
 /* 카드속박스 */
-.in-card{
+.in-card {
   position: absolute;
   top: 0;
   left: 0;
@@ -135,27 +144,26 @@
   height: 100%;
 }
 
-
 /* 캐릭터 이름 */
 .card h3 {
-    padding-top: 2vh;
-    padding-left: 3vh;
-    font-size: 1.5vw;
-    color: #fff;
-    font-weight: bold;
-    text-align: left;
-    text-shadow: 0px 5px 5px #0000007a;
-  }
+  padding-top: 2vh;
+  padding-left: 3vh;
+  font-size: 1.5vw;
+  color: #fff;
+  font-weight: bold;
+  text-align: left;
+  text-shadow: 0px 5px 5px #0000007a;
+}
 
 /* 캐릭터 명대사 */
 .card p {
   margin-top: auto;
   color: #fff;
   text-align: left;
-  font-size: 2.4vw;
+  font-size: 2vw;
   padding-left: 3vh;
   padding-right: 3vh;
-  padding-bottom: 2vh;
+  padding-bottom: 4vh;
   font-weight: bold;
   text-shadow: 0px 5px 5px #0000007a;
 }
@@ -166,19 +174,13 @@
   rotate: 10deg;
   background-image: url(../img/carl_img/carl15.jpg);
 }
-/* .card:nth-child(1) p {
-  padding-top: 45vh;
-} */
 
 /* 두번째 카드 */
 .card:nth-child(2) {
   margin-top: 120vh;
-  rotate: -15deg;
+  rotate: -10deg;
   background-image: url(../img/russell_img/russell12.jpg);
 }
-/* .card:nth-child(2) p {
-  padding-top: 41vh;
-} */
 
 /* 세번째 카드 */
 .card:nth-child(3) {
@@ -186,39 +188,11 @@
   rotate: 3deg;
   background-image: url(../img/dug_img/dug9.jpg);
 }
-/* .card:nth-child(3) p {
-  padding-top: 45vh;
-} */
 
 /* 네번째 카드 */
 .card:nth-child(4) {
   margin-top: 320vh;
-  rotate: 14deg;
+  rotate: -15deg;
   background-position: 60% 20%;
   background-image: url(../img/kevin_img/kevin13.jpg);
-}
-/* .card:nth-child(4) p {
-  padding-top: 52vh;
-} */
-
-
-@media screen and (max-width: 800px) {
-
-  .card{
-    
-  width: 48vw;
-  }
-
-
-  
-/* 세번째 카드 */
-.card:nth-child(3) {
-  top: 30vh;
-  margin-top: 260vh;
-}
-
-/* 네번째 카드 */
-.card:nth-child(4) {
-  margin-top: 260vh;
-}
 }

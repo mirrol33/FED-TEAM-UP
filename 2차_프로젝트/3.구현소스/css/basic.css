@@ -153,11 +153,11 @@ header .ham-nav li a {
   font-size: 3rem;
   font-weight: 700;
 }
-header .ham-nav li > a > img {
+header .ham-nav li a img {
   height: 40px;
   margin: 8px;
 }
-header .ham-nav li > span > img {
+header .ham-nav li span > img {
   height: 28px;
   opacity: 0;
   transition: all 0.3s ease-out;

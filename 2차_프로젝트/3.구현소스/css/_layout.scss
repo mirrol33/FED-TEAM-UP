@@ -143,31 +143,31 @@ header {
       a {
         font-size: 3rem;
         font-weight: 700;
+        img {
+          height: 40px;
+          margin: 8px;
+        }
       }
-    }
-    li > a > img {
-      height: 40px;
-      margin: 8px;
-    }
-    li > span > img {
-      height: 28px;
-      opacity: 0;
-      transition: all 0.3s ease-out;
-    }
-    li.on > span > img {
-      opacity: 1;
-    }
-    li .balloon {
-      animation: balloon-ani 1s linear infinite forwards;
-    }
-    li:nth-child(1n) .balloon {
-      position: absolute;
-      left: -8%;
-    }
-    li:nth-child(2n) .balloon {
-      position: absolute;
-      left: unset;
-      right: -8%;
+      span > img {
+        height: 28px;
+        opacity: 0;
+        transition: all 0.3s ease-out;
+      }
+      &.on > span > img {
+        opacity: 1;
+      }
+      .balloon {
+        animation: balloon-ani 1s linear infinite forwards;
+      }
+      &:nth-child(1n) .balloon {
+        position: absolute;
+        left: -8%;
+      }
+      &:nth-child(2n) .balloon {
+        position: absolute;
+        left: unset;
+        right: -8%;
+      }
     }
   }
   @keyframes balloon-ani {

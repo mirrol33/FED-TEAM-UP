@@ -2,16 +2,14 @@
 const headerComponent = {
   template: `
   <div class="header">
-    <div class="inner">
-      <h1><a href="./"><img src="./images/layout/logo.png" alt="logo" /></a></h1>
-      <div @click="toggleShow" class="ham-nav-btn">
-        <a href="#none">
-        <svg width="43" height="16" viewBox="0 0 43 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect y="4" width="43" height="2" fill="#333" class="burger-line__top"></rect>
-        <rect y="10" width="43" height="2" fill="#333" class="burger-line__bottom"></rect>
-        </svg>
-        </a>
-      </div>
+    <h1><a href="./"><img src="./images/layout/logo.png" alt="logo" /></a></h1>
+    <div @click="toggleShow" class="ham-nav-btn">
+      <a href="#none">
+      <svg width="43" height="16" viewBox="0 0 43 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect y="4" width="43" height="2" fill="#333" class="burger-line__top"></rect>
+      <rect y="10" width="43" height="2" fill="#333" class="burger-line__bottom"></rect>
+      </svg>
+      </a>
     </div>
     <nav class="header-menu">
       <ul>

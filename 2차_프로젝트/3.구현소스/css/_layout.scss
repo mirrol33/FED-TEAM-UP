@@ -1,20 +1,20 @@
+/* 변수 */
+$topHeight: 2vw;
 /************ header 상단영역 ************/
 header {
   position: absolute;
   width: 100%;
-  margin: 4vh auto !important;
+  background-color: #ffffff40;
+  z-index: 1;
   .header {
     position: relative;
     margin: 0 auto;
     width: 90%;
     text-transform: uppercase;
-    z-index: 1;
     h1 {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: min(20vw, 160px);
       height: auto;
+      padding: $topHeight 0;
       img {
         width: 100%;
         height: auto;
@@ -23,7 +23,7 @@ header {
   }
   .header-menu {
     position: absolute;
-    top: 0;
+    top: $topHeight;
     left: 50%;
     translate: -50% 0;
     @include tablet-small {
@@ -108,16 +108,16 @@ header {
   .ham-nav-btn {
     text-align: center;
     position: fixed;
-    top: -4vh;
+    top: -$topHeight;
     left: 50%;
     translate: -50% 0%;
     transition: all 0.3s ease-out;
     z-index: 2;
     &.on {
-      top: 4vh;
+      top: $topHeight;
     }
     &.active {
-      top: 4vh;
+      top: $topHeight;
     }
     & .burger-line__top,
     & .burger-line__bottom {
@@ -192,7 +192,7 @@ header {
   /* 추가 회원메뉴 */
   .add-menu {
     position: absolute;
-    top: 5%;
+    top: $topHeight;
     right: 5%;
     ol {
       display: flex;
@@ -208,6 +208,7 @@ header {
 /*********** main 컨텐츠영역 ***********/
 main {
   min-height: 1000px;
+  margin-bottom: 2vw;
 }
 
 /*********** footer 하단영역 ***********/

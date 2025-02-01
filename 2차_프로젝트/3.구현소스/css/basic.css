@@ -6,11 +6,13 @@
 디바이스 pointer로 hover가 가능한 경우에만 스타일을 적용
 반대로는 @media (hover: none) {} 
 */
+/* 변수 */
 /************ header 상단영역 ************/
 header {
   position: absolute;
   width: 100%;
-  margin: 4vh auto !important;
+  background-color: rgba(255, 255, 255, 0.2509803922);
+  z-index: 1;
   /* 추가 회원메뉴 */
 }
 header .header {
@@ -18,14 +20,11 @@ header .header {
   margin: 0 auto;
   width: 90%;
   text-transform: uppercase;
-  z-index: 1;
 }
 header .header h1 {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: min(20vw, 160px);
   height: auto;
+  padding: 2vw 0;
 }
 header .header h1 img {
   width: 100%;
@@ -33,7 +32,7 @@ header .header h1 img {
 }
 header .header-menu {
   position: absolute;
-  top: 0;
+  top: 2vw;
   left: 50%;
   translate: -50% 0;
 }
@@ -122,17 +121,17 @@ header .header__menu-circle.n5 {
 header .ham-nav-btn {
   text-align: center;
   position: fixed;
-  top: -4vh;
+  top: -2vw;
   left: 50%;
   translate: -50% 0%;
   transition: all 0.3s ease-out;
   z-index: 2;
 }
 header .ham-nav-btn.on {
-  top: 4vh;
+  top: 2vw;
 }
 header .ham-nav-btn.active {
-  top: 4vh;
+  top: 2vw;
 }
 header .ham-nav-btn .burger-line__top, header .ham-nav-btn .burger-line__bottom {
   transition: all 0.3s ease-out;
@@ -203,7 +202,7 @@ header .ham-nav li:nth-child(2n) .balloon {
 }
 header .add-menu {
   position: absolute;
-  top: 5%;
+  top: 2vw;
   right: 5%;
 }
 header .add-menu ol {
@@ -218,6 +217,7 @@ header .add-menu li.hide {
 /*********** main 컨텐츠영역 ***********/
 main {
   min-height: 1000px;
+  margin-bottom: 2vw;
 }
 
 /*********** footer 하단영역 ***********/

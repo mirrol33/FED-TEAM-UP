@@ -248,6 +248,7 @@ footer .footer p {
   width: 90%;
   margin: 0 auto;
   padding: min(20vw, 120px) 0;
+  overflow-x: hidden;
   color: #333;
   text-align: center;
 }

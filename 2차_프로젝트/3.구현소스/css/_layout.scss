@@ -1,5 +1,6 @@
 /* 변수 */
-$topHeight: 2vw;
+$topHeight-PC: 3vh;
+
 /************ header 상단영역 ************/
 header {
   position: absolute;
@@ -14,7 +15,7 @@ header {
     h1 {
       width: min(20vw, 160px);
       height: auto;
-      padding: $topHeight 0;
+      padding: $topHeight-PC 0;     
       img {
         width: 100%;
         height: auto;
@@ -23,7 +24,7 @@ header {
   }
   .header-menu {
     position: absolute;
-    top: $topHeight;
+    top: $topHeight-PC;
     left: 50%;
     translate: -50% 0;
     @include tablet-small {
@@ -108,16 +109,16 @@ header {
   .ham-nav-btn {
     text-align: center;
     position: fixed;
-    top: -$topHeight;
+    top: - $topHeight-PC;
     left: 50%;
     translate: -50% 0%;
     transition: all 0.3s ease-out;
     z-index: 2;
     &.on {
-      top: $topHeight;
+      top: $topHeight-PC;
     }
     &.active {
-      top: $topHeight;
+      top: $topHeight-PC;
     }
     & .burger-line__top,
     & .burger-line__bottom {
@@ -192,7 +193,7 @@ header {
   /* 추가 회원메뉴 */
   .add-menu {
     position: absolute;
-    top: $topHeight;
+    top: $topHeight-PC;
     right: 5%;
     ol {
       display: flex;

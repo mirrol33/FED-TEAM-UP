@@ -24,7 +24,7 @@ header .header {
 header .header h1 {
   width: min(20vw, 160px);
   height: auto;
-  padding: 2vw 0;
+  padding: 3vh 0;
 }
 header .header h1 img {
   width: 100%;
@@ -32,7 +32,7 @@ header .header h1 img {
 }
 header .header-menu {
   position: absolute;
-  top: 2vw;
+  top: 3vh;
   left: 50%;
   translate: -50% 0;
 }
@@ -121,17 +121,17 @@ header .header__menu-circle.n5 {
 header .ham-nav-btn {
   text-align: center;
   position: fixed;
-  top: -2vw;
+  top: -3vh;
   left: 50%;
   translate: -50% 0%;
   transition: all 0.3s ease-out;
   z-index: 2;
 }
 header .ham-nav-btn.on {
-  top: 2vw;
+  top: 3vh;
 }
 header .ham-nav-btn.active {
-  top: 2vw;
+  top: 3vh;
 }
 header .ham-nav-btn .burger-line__top, header .ham-nav-btn .burger-line__bottom {
   transition: all 0.3s ease-out;
@@ -202,7 +202,7 @@ header .ham-nav li:nth-child(2n) .balloon {
 }
 header .add-menu {
   position: absolute;
-  top: 2vw;
+  top: 3vh;
   right: 5%;
 }
 header .add-menu ol {
@@ -219,6 +219,7 @@ main {
   min-height: 1000px;
   margin-bottom: 2vw;
 }
+
 /*********** footer 하단영역 ***********/
 footer {
   background-color: #333;

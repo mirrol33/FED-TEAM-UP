@@ -7,6 +7,13 @@ header {
   width: 100%;
   background-color: #ffffff40;
   z-index: 1;
+  .header_inner {
+    position: relative;
+    padding: $topHeight-PC 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .header {
     position: relative;
     margin: 0 auto;
@@ -15,18 +22,13 @@ header {
     h1 {
       width: min(20vw, 160px);
       height: auto;
-      padding: $topHeight-PC 0;     
       img {
         width: 100%;
         height: auto;
       }
     }
   }
-  .header-menu {
-    position: absolute;
-    top: $topHeight-PC;
-    left: 50%;
-    translate: -50% 0;
+  .header-menu {    
     @include tablet-small {
       display: none;
     }
@@ -192,9 +194,6 @@ header {
   }
   /* 추가 회원메뉴 */
   .add-menu {
-    position: absolute;
-    top: $topHeight-PC;
-    right: 5%;
     ol {
       display: flex;
       justify-content: flex-start;

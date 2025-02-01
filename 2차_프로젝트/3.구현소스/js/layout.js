@@ -2,7 +2,36 @@
 const headerComponent = {
   template: `
   <div class="header">
-    <h1><a href="./"><img src="./images/layout/logo.png" alt="logo" /></a></h1>
+    <div class="header_inner">
+      <h1><a href="./"><img src="./images/layout/logo.png" alt="logo" /></a></h1>    
+      <nav class="header-menu">
+        <ul>
+        <li v-for="(menu, idx) in menus" :key="idx">
+          <a :href="menu.link">{{ menu.name }}</a>
+        </li>
+        </ul>
+      </nav>
+      <nav class="add-menu">
+        <ol>
+          <li 
+          v-for="
+            (v,k) in addMenu
+            /* v - 객체값, k - 키명 */
+          "
+          :key="k"
+          :class="
+            // 키명이 '로그아웃'이면 'hide' 클래스넣기
+            k=='로그아웃' ? 'hide' : ''
+          ">
+            <a href="#"
+            @click.prevent="goPage(k)"
+            >
+            <i :class="v" :title="k"></i>
+            </a>
+          </li>
+        </ol>
+      </nav>
+    </div>
     <div @click="toggleShow" class="ham-nav-btn">
       <a href="#none">
       <svg width="43" height="16" viewBox="0 0 43 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -11,33 +40,6 @@ const headerComponent = {
       </svg>
       </a>
     </div>
-    <nav class="header-menu">
-      <ul>
-      <li v-for="(menu, idx) in menus" :key="idx">
-        <a :href="menu.link">{{ menu.name }}</a>
-      </li>
-      </ul>
-    </nav>
-    <nav class="add-menu">
-      <ol>
-        <li 
-        v-for="
-          (v,k) in addMenu
-          /* v - 객체값, k - 키명 */
-        "
-        :key="k"
-        :class="
-          // 키명이 '로그아웃'이면 'hide' 클래스넣기
-          k=='로그아웃' ? 'hide' : ''
-        ">
-          <a href="#"
-          @click.prevent="goPage(k)"
-          >
-          <i :class="v" :title="k"></i>
-          </a>
-        </li>
-      </ol>
-    </nav>
     <div class="ham-nav-wrap">
       <div v-for="n in 5" :key="n" class="header__menu-circle" :class="'n' + n"></div>
       <ul class="ham-nav">

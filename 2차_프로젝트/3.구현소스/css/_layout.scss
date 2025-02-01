@@ -116,6 +116,9 @@ header {
     &.on {
       top: 4vh;
     }
+    &.active {
+      top: 4vh;
+    }
     & .burger-line__top,
     & .burger-line__bottom {
       transition: all 0.3s ease-out;

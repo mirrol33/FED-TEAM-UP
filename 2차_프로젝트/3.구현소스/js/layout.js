@@ -15,7 +15,7 @@ const headerComponent = {
     </div>
     <nav class="header-menu">
       <ul>
-      <li v-for="(menu, idx) in menus">
+      <li v-for="(menu, idx) in menus" :key="idx">
         <a :href="menu.link">{{ menu.name }}</a>
       </li>
       </ul>
@@ -24,9 +24,10 @@ const headerComponent = {
       <ol>
         <li 
         v-for="
-          (v,k) in this.addMenu
+          (v,k) in addMenu
           /* v - 객체값, k - 키명 */
         "
+        :key="k"
         :class="
           // 키명이 '로그아웃'이면 'hide' 클래스넣기
           k=='로그아웃' ? 'hide' : ''
@@ -40,7 +41,7 @@ const headerComponent = {
       </ol>
     </nav>
     <div class="ham-nav-wrap">
-      <div v-for="n in 5" class="header__menu-circle" :class="'n' + n"></div>
+      <div v-for="n in 5" :key="n" class="header__menu-circle" :class="'n' + n"></div>
       <ul class="ham-nav">
         <li @mouseover="addClass" @mouseout="removeClass" v-for="(menu, idx) in menus"><a :href="menu.link">{{ menu.name }}</a></li>
         <li>
@@ -54,14 +55,14 @@ const headerComponent = {
   data: () => ({
     // 메뉴 리스트
     menus: [
-      {name: "Home", link: "./"},
-      {name: "About", link: "./about.html"},
-      {name: "Story", link: "./story.html"},
-      {name: "Video", link: "./video.html"},
-      {name: "Products", link: "./products.html"},
+      { name: "Home", link: "./" },
+      { name: "About", link: "./about.html" },
+      { name: "Story", link: "./story.html" },
+      { name: "Video", link: "./video.html" },
+      { name: "Products", link: "./products.html" },
     ],
     // 회원메뉴 데이터 : 키는 메뉴, 값은 폰트어썸 클래스
-    addMenu: {  
+    addMenu: {
       로그인: "fa-solid fa-right-to-bracket",
       로그아웃: "fa-solid fa-right-from-bracket",
       회원가입: "fa-solid fa-user",
@@ -113,15 +114,14 @@ const headerComponent = {
     },
     // 햄버거 메뉴 스크롤 함수
     scrollFn() {
-      const headerMenu = document.querySelector(".ham-nav-btn");
       let nextScrollTop = window.scrollY;
       // console.log('scroll',nextScrollTop);
       if (this.preScrollTop < nextScrollTop || nextScrollTop < 100) {
-        // .ham-nav-btn 요소에 스크롤 내려갈때 on 클래스 삭제
-        headerMenu.classList.remove("on");
+        // 스크롤 내려갈때 on 클래스 삭제
+        $(".ham-nav-btn").removeClass("on");
       } else {
-        // .ham-nav-btn 요소에 스크롤 올라갈때 on 클래스 추가
-        headerMenu.classList.add("on");
+        // 스크롤 올라갈때 on 클래스 추가
+        $(".ham-nav-btn").addClass("on");
       }
       this.preScrollTop = nextScrollTop;
     },
@@ -146,10 +146,33 @@ const headerComponent = {
       // 페이지 이동하기 //
       location.href = pgName + ".html";
     }, /// goPage 메서드 ///
+    // 모바일버전 체크 함수
+    isMobile() {
+      return (
+        window.innerWidth <= 768 ||
+        /iPhone|iPad|iPod|Android|BlackBerry|Opera Mini|IEMobile|WPDesktop/i.test(
+          navigator.userAgent
+        )
+      );
+    },
+    // 새로고침 또는 리사이즈시 햄메뉴 여부체크
+    checkMobileView() {
+      if (this.isMobile()) {
+        document.querySelector(".ham-nav-btn").classList.add("on");
+        window.removeEventListener("scroll", this.scrollFn);
+      } else {
+        document.querySelector(".ham-nav-btn").classList.remove("on");
+        window.addEventListener("scroll", this.scrollFn);
+      }
+    },
   }, //// methods ////
   mounted() {
-    // 햄버거 메뉴 스크롤 이벤트 실행
-    window.addEventListener("scroll", this.scrollFn);
+    // 초기 로딩 시 모바일 여부 체크
+    this.checkMobileView();
+
+    // 리사이즈 이벤트 추가
+    window.addEventListener("resize", this.checkMobileView);
+
     // 폰트어썸 CSS 추가
     $("head").append(`
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
@@ -167,4 +190,4 @@ const footerComponent = {
   `,
 };
 
-export {headerComponent, footerComponent};
+export { headerComponent, footerComponent };

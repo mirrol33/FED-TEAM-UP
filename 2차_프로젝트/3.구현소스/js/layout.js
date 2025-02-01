@@ -173,9 +173,12 @@ const headerComponent = {
     // 리사이즈 이벤트 추가
     window.addEventListener("resize", this.checkMobileView);
 
-    // 폰트어썸 CSS 추가
+    // head 공통 추가
     $("head").append(`
+      <!-- 어썸폰트 -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+      <!-- 파비콘 -->
+      <link rel="icon" type="image/x-icon" href="https://images.squarespace-cdn.com/content/v1/60241cb68df65b530cd84d95/564dcb60-ccdb-4239-ae2b-da87c3c08f09/favicon.ico?format=100w">
       `);
   },
 };

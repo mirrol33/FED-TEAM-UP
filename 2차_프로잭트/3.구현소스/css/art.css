@@ -1,1 +1,77 @@
 /* 컨셉아트 페이지 CSS - art.css */
+
+/* 소개박스 */
+.art-intro{
+    display: flex;
+    /* aspect-ratio: 1.7; */
+    outline: 5px dotted blue;
+}
+/* 소개박스 하위 글박스 */
+.art-intro article{
+    width: 33.333%;
+    padding: 5vh;
+    box-sizing: border-box;
+}
+/* 소개박스 하위 갤러리박스 */
+.art-intro aside{
+    width: 66.666%;
+    padding: 5vh;
+    box-sizing: border-box;
+}
+
+/* 갤러리 플렉스 박스 */
+.fx-gallery-box {
+    /* width: 70vw; */
+    aspect-ratio: 1.5;
+    /* margin-bottom: 5vh; */
+    outline: 1px dashed red;
+}
+.fx-gallery-box ul{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.fx-gallery-box ul li{
+    width: 33.333%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    outline: 1px dotted green;
+}
+.fx-gallery-box ul li.large{
+    width: 66.666%;
+}
+
+
+.gbox1 ul li:nth-child(1){
+    background-image: url(../img/research/1.jpg);
+}
+.gbox1 ul li:nth-child(2){
+    background-image: url(../img/research/2.jpg);
+}
+.gbox1 ul li:nth-child(3){
+    background-image: url(../img/research/3.jpg);
+}
+.gbox1 ul li:nth-child(4){
+    background-image: url(../img/research/5.jpg);
+}
+.gbox1 ul li:nth-child(5){
+    background-image: url(../img/research/6.jpg);
+}
+
+
+.gbox2 ul li:nth-child(1){
+    background-image: url(../img/house/house4.jpg);
+}
+.gbox2 ul li:nth-child(2){
+    background-image: url(../img/house/house8.jpg);
+}
+.gbox2 ul li:nth-child(3){
+    background-image: url(../img/house/house11.jpg);
+}
+.gbox2 ul li:nth-child(4){
+    background-image: url(../img/house/house14.jpg);
+}
+.gbox2 ul li:nth-child(5){
+    background-image: url(../img/house/house15.jpg);
+}
+

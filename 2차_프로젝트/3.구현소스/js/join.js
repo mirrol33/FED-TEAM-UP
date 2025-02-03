@@ -12,7 +12,7 @@ const joinComponent = {
   <div id="main-area">
         <main class="main-area ibx">
            <!-- 2-1. 회원가입 페이지 상단영역 --> 
-           <h2>join membership</h2>
+           <h2 class="stit">join membership</h2>
            <!-- 2-2. 갤러리 페이지 컨텐츠 박스 --> 
           <section class="scont">
             <form action="process.php" method="post" class="logF">

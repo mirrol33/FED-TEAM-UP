@@ -6,16 +6,13 @@ import valid_member from "./valid_member.js";
 // 반드시 뷰 인스턴스 mounted 메서드에서 호출한다!
 
 // 1. 회원가입 컴포넌트
-export const JoinComp = Vue.component("join-comp", {
+const joinComponent = {
   // 1-1. 템플릿코드설정 /////
   template: `
   <div id="main-area">
         <main class="main-area ibx">
            <!-- 2-1. 회원가입 페이지 상단영역 --> 
-          <header class="ctop">
-             <!-- 2-1-1. 서브타이틀 --> 
-            <h2 class="stit">Member</h2>
-          </header>
+           <h2>join membership</h2>
            <!-- 2-2. 갤러리 페이지 컨텐츠 박스 --> 
           <section class="scont">
             <form action="process.php" method="post" class="logF">
@@ -80,15 +77,17 @@ export const JoinComp = Vue.component("join-comp", {
                  <!-- 성별 --> 
                 <li>
                   <span class="itit">성별</span>
-                  <label htmlFor="gen1">남성</label>
+                  <label htmlFor="gen1" value="m">남성</label>
                   <input type="radio" name="gen" id="gen1" />
-                  <label htmlFor="gen2">여성</label>
+                  <label htmlFor="gen2" value="w">여성</label>
                   <input type="radio" name="gen" id="gen2" checked />
                    <!-- 라디오버튼의 name 속성을 
-                              같은 이름으로 쓰면 그룹핑되어
-                              하나만 선택된다! 
-    
-                              checked 속성 - 기본체크설정 -->
+                    같은 이름으로 쓰면 그룹핑되어
+                    하나만 선택된다!
+                    checked 속성 - 기본체크설정
+                    value값 설정해야 선택값 읽을때 사용됨!
+                    (남성은 'm', 여성은 'w')
+                    -->
                 </li>
                  <!-- 이메일 --> 
                 <li>
@@ -137,15 +136,15 @@ export const JoinComp = Vue.component("join-comp", {
   `,
   // 1-2. 데이터 셋업 리턴 메서드 /////
   data() {
-    return {
-
-    };
+    return {};
   },
   // 컴포넌트 라이프 사이클 메서드 구역 ///
   // mounted 메서드 : DOM로딩후 실행구역!
   // -> 일반 DOM코딩 JS는 여기서 호출한다!!!
-  mounted(){
+  mounted() {
     // 유효성검사 함수호출!
     valid_member();
-  } /// mounted ///
-});
+  }, /// mounted ///
+};
+// JoinComponent 내보내기
+export default joinComponent;

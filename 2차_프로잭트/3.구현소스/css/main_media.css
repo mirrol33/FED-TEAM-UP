@@ -3,8 +3,34 @@
 @media screen and (max-width: 800px) {
 
 /********************************* 캐릭터 디자인 영역 *********************************/
-
-
+.main-wrap{
+  overflow-x: hidden;
+}
+.main-visual-page {
+  height: 56vh;
+}
+.main-img {
+  translate: -13% -28%;
+}
+/* 로고 등장 애니메이션 */
+@keyframes up-logo-img-ani {
+  to {
+    top: 11%;
+    left: 15%;
+    opacity: 1;
+  }
+}
+.main-text {
+  font-size: 7vw;
+}
+/* 텍스트 등장 애니메이션 */
+@keyframes up-text-ani {
+  to {
+    top: 54%;
+    left: 6%;
+    opacity: 1;
+  }
+}
 
 /********************************* 영화 설명 영역 *********************************/
 

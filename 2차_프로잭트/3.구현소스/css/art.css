@@ -156,7 +156,7 @@
 /* 라잇박스 플러그인용 CSS 재설정 */
 #jquery-lightbox,
 #lightbox-container-image-data-box  {
-    width: 60vw !important;
+    width: 60vmax !important;
     height: auto !important;
     top: 50% !important;
     left: 20vw !important;
@@ -164,7 +164,7 @@
     box-sizing: border-box;
 }
 #lightbox-container-image-box{
-    width: 60vw !important;
+    width: 60vmax !important;
     height: auto !important;
 }
 #lightbox-container-image-box img{

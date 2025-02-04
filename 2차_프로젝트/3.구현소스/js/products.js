@@ -3,7 +3,7 @@
 // JSON 상품 데이터 불러오기
 import proData from "../data/goods.json" with { type: "json" };
 
-const proComponent = {
+const proComp = {
   template: `
   <div class="products-wrap">
     <span class="select-cate">전체</span>
@@ -93,5 +93,5 @@ const proComponent = {
   },
 };
 
-// proComponent 내보내기
-export default proComponent;
+// proComp 내보내기
+export default proComp;

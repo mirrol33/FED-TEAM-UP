@@ -1,5 +1,5 @@
 // 상단 컴포넌트 ////
-const headerComponent = {
+const headerComp = {
   template: `
   <div class="header">
     <div class="header_inner">
@@ -184,7 +184,7 @@ const headerComponent = {
 };
 
 // 하단 컴포넌트 ////
-const footerComponent = {
+const footerComp = {
   template: `
     <div class="footer">
     <p>@2025 All Rights Reserved.</p>
@@ -193,4 +193,4 @@ const footerComponent = {
   `,
 };
 
-export { headerComponent, footerComponent };
+export { headerComp, footerComp };

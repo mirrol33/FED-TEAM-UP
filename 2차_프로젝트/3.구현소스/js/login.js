@@ -4,7 +4,7 @@
 import validLogin from "./valid_login.js";
 
 // 1. 로그인 컴포넌트
-const loginComponent = {
+const loginComp = {
   // 1. 템플릿
   template: `
       <div id="main-area">
@@ -75,5 +75,5 @@ const loginComponent = {
     validLogin();
   },
 };
-// loginComponent 내보내기
-export default loginComponent;
+// loginComp 내보내기
+export default loginComp;

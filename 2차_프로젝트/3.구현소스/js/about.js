@@ -1,5 +1,5 @@
 // about.js
-const aboutComponent = {
+const aboutComp = {
   template: `
     <div class="about-wrap">
       <h2>ABOUT</h2>
@@ -100,5 +100,5 @@ const aboutComponent = {
   },
 };
 
-// aboutComponent 내보내기
-export default aboutComponent;
+// aboutComp 내보내기
+export default aboutComp;

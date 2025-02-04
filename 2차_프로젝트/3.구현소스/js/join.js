@@ -6,7 +6,7 @@ import valid_member from "./valid_member.js";
 // 반드시 뷰 인스턴스 mounted 메서드에서 호출한다!
 
 // 1. 회원가입 컴포넌트
-const joinComponent = {
+const joinComp = {
   // 1-1. 템플릿코드설정 /////
   template: `
   <div id="main-area">
@@ -147,5 +147,5 @@ const joinComponent = {
     valid_member();
   }, /// mounted ///
 };
-// JoinComponent 내보내기
-export default joinComponent;
+// joinComp 내보내기
+export default joinComp;

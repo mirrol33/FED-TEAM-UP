@@ -1,10 +1,11 @@
-// 뷰엑스 스토아 JS - 전역뷰데이터 저장소!!!
+// store.js
 
-/// 뷰엑스 스토아를 이용한 변수 셋팅하기 ////
-// [뷰엑스 스토아 인스턴스를 생성한다!
+// JSON 상품 데이터 불러오기
+import proData from "../data/goods.json" with { type: "json" };
+
 export default new Vuex.Store({
-  state: {},
-  actions: {},
-  mutations: {},
-  getters: {},
+  state: proData,
+  // mutations: {},
+  // actions: {},
+  // getters: {},
 });

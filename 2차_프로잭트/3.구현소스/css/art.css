@@ -9,7 +9,7 @@
 /* 소개박스 하위 글박스 */
 .art-intro article {
   width: 33.333%;
-  padding: 10vh;
+  padding: 7vh 5vw 0 5vw;
   box-sizing: border-box;
 }
 
@@ -61,8 +61,7 @@
 .art-intro h2 {
   font-weight: bold;
   font-size: 2vw;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 3vw 0 3vw 0;
 }
 
 .art-intro p {

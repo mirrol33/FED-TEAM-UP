@@ -5,7 +5,8 @@
     "name": "Dug Plush Up Medium 12",
     "price": 50000,
     "sale": 40000,
-    "simple": "상품 설명글1"
+    "simple": "상품 설명글1",
+    "inventory": "5"
   },
   {
     "id": "2",
@@ -13,7 +14,8 @@
     "name": "Up Deluxe Figure Play Set",
     "price": 20000,
     "sale": 10000,
-    "simple": "상품 설명글2"
+    "simple": "상품 설명글2",
+    "inventory": "1"
   },
   {
     "id": "3",
@@ -21,7 +23,8 @@
     "name": "LEGO Up House 43217 Disney100",
     "price": 30000,
     "sale": 20000,
-    "simple": "상품 설명글3"
+    "simple": "상품 설명글3",
+    "inventory": "2"
   },
   {
     "id": "4",
@@ -29,7 +32,8 @@
     "name": "Up Fashion T-Shirt for Kids",
     "price": 20000,
     "sale": 10000,
-    "simple": "상품 설명글4"
+    "simple": "상품 설명글4",
+    "inventory": "4"
   },
   {
     "id": "5",
@@ -37,7 +41,8 @@
     "name": "Up ''Adventure Is Out There'' Necklace",
     "price": 40000,
     "sale": 30000,
-    "simple": "상품 설명글5"
+    "simple": "상품 설명글5",
+    "inventory": "2"
   },
   {
     "id": "6",
@@ -45,7 +50,8 @@
     "name": "Grape Soda Water Bottle with Straw Up",
     "price": 20000,
     "sale": 20000,
-    "simple": "상품 설명글6"
+    "simple": "상품 설명글6",
+    "inventory": "2"
   },
   {
     "id": "7",
@@ -53,7 +59,8 @@
     "name": "Carl Fredricksen and Ellie Charm by Pandora",
     "price": 10000,
     "sale": 10000,
-    "simple": "상품 설명글7"
+    "simple": "상품 설명글7",
+    "inventory": "3"
   },
   {
     "id": "8",
@@ -61,7 +68,8 @@
     "name": "Carl Fredricksen and Ellie Charm by Pandora",
     "price": 20000,
     "sale": 10000,
-    "simple": "상품 설명글8"
+    "simple": "상품 설명글8",
+    "inventory": "2"
   },
   {
     "id": "9",
@@ -69,7 +77,8 @@
     "name": "Carl Fredricksen and Ellie Charm by Pandora",
     "price": 10000,
     "sale": 10000,
-    "simple": "상품 설명글9"
+    "simple": "상품 설명글9",
+    "inventory": "1"
   },
   {
     "id": "10",
@@ -77,7 +86,8 @@
     "name": "Up ''Adventure Awaits'' Canvas Artwork by Michelle St.Laurent",
     "price": 20000,
     "sale": 10000,
-    "simple": "상품 설명글10"
+    "simple": "상품 설명글10",
+    "inventory": "2"
   },
   {
     "id": "11",
@@ -85,7 +95,8 @@
     "name": "Up Fashion T-Shirt for Kids",
     "price": 10000,
     "sale": 10000,
-    "simple": "상품 설명글11"
+    "simple": "상품 설명글11",
+    "inventory": "5"
   },
   {
     "id": "12",
@@ -93,7 +104,8 @@
     "name": "Up House Bracelet",
     "price": 20000,
     "sale": 20000,
-    "simple": "상품 설명글12"
+    "simple": "상품 설명글12",
+    "inventory": "6"
   },
   {
     "id": "13",
@@ -101,7 +113,8 @@
     "name": "Up Basket Tote",
     "price": 30000,
     "sale": 10000,
-    "simple": "상품 설명글13"
+    "simple": "상품 설명글13",
+    "inventory": "1"
   },
   {
     "id": "14",
@@ -109,7 +122,8 @@
     "name": "Up It Takes Two Gallery Wrapped Canvas by Tom Matousek",
     "price": 20000,
     "sale": 10000,
-    "simple": "상품 설명글14"
+    "simple": "상품 설명글14",
+    "inventory": "2"
   },
   {
     "id": "15",
@@ -117,7 +131,8 @@
     "name": "Up It Takes Two Gallery Wrapped Canvas by Tom Matousek",
     "price": 40000,
     "sale": 10000,
-    "simple": "상품 설명글15"
+    "simple": "상품 설명글15",
+    "inventory": "1"
   },
   {
     "id": "16",
@@ -125,7 +140,8 @@
     "name": "Up House MagicBand+",
     "price": 50000,
     "sale": 30000,
-    "simple": "상품 설명글16"
+    "simple": "상품 설명글16",
+    "inventory": "2"
   },
   {
     "id": "17",
@@ -133,7 +149,8 @@
     "name": "Up House Earrings by Rebecca Hook",
     "price": 20000,
     "sale": 10000,
-    "simple": "상품 설명글17"
+    "simple": "상품 설명글17",
+    "inventory": "3"
   },
   {
     "id": "18",
@@ -141,7 +158,8 @@
     "name": "Up Journey to Paradise Falls Giclée on Canvas by Tim Rogerson",
     "price": 20000,
     "sale": 10000,
-    "simple": "상품 설명글18"
+    "simple": "상품 설명글18",
+    "inventory": "2"
   },
   {
     "id": "19",
@@ -149,7 +167,8 @@
     "name": "Up Disney Gift Card",
     "price": 10000,
     "sale": 10000,
-    "simple": "상품 설명글19"
+    "simple": "상품 설명글19",
+    "inventory": "5"
   },
   {
     "id": "20",
@@ -157,6 +176,7 @@
     "name": "Up Levitating House Figure by Grand Jester Studios",
     "price": 30000,
     "sale": 20000,
-    "simple": "상품 설명글20"
+    "simple": "상품 설명글20",
+    "inventory": "4"
   }
 ]

@@ -45,6 +45,7 @@ const proComponent = {
           >
             {{ discountRate(p) }}%
           </span>
+          <span class="inventory"> 재고수량: {{p.inventory}} </span>
         </a>
       </div>
     </div>

@@ -48,4 +48,29 @@
   .fx-gallery-box ul li {
     width: 50%;
   }
+
+  /* 라잇박스 플러그인용 CSS 재설정 */
+  #jquery-lightbox,
+  #lightbox-container-image-data-box {
+    width: 90vw !important;
+    height: auto !important;
+    top: 50% !important;
+    left: 5vw !important;
+    translate: 0 -50%;
+    box-sizing: border-box;
+  }
+  #jquery-lightbox {
+    position: fixed;
+  }
+  #lightbox-container-image-box {
+    width: 90vw !important;
+    height: auto !important;
+  }
+  #lightbox-container-image-box img {
+    width: 100% !important;
+  }
+  #lightbox-nav-btnPrev,
+  #lightbox-nav-btnNext {
+    height: 100% !important;
+  }
 }

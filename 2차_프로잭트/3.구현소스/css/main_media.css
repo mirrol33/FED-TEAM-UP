@@ -43,8 +43,8 @@
 /********************************* 영화 설명 영역 *********************************/
 
 .intro-text-box {
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
 }
 .intro-text-box h2 {
     font-size: 4vw;

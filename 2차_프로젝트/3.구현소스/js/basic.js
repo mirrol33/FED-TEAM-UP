@@ -9,6 +9,7 @@ import { headerComponent, footerComponent } from "./layout.js";
 import aboutComp from "./about.js";
 import proComp from "./products.js";
 import joinComp from "./join.js";
+import loginComp from "./login.js";
 
 // 전체 요소 #app 태그로 감싸기!
 $("header, main, footer").wrapAll('<div id="app"></div>');
@@ -27,7 +28,7 @@ new Vue({
     "about-component": aboutComp,
     "products-component": proComp,
     "join-comp": joinComp,
-    
+    "login-comp": loginComp,
   },
   // data: () => ({}),
   // methods: {},

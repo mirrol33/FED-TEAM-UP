@@ -14,6 +14,11 @@
     padding: 10vh;
     box-sizing: border-box;
 }
+
+/* 이미지설명 상단 큰 이미지 숨기기 */
+.art-intro article .fx-gallery-box{
+ display: none;
+}
 .text-right{
     text-align: right;
 }
@@ -45,6 +50,12 @@
 }
 .fx-gallery-box ul li.large{
     width: 66.666%;
+}
+/* 라잇박스를 위한 a요소 넣기 */
+.fx-gallery-box ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 /*********************************************** 소개영역 ***********************************************/
@@ -142,4 +153,8 @@
 }
 .gbox4 ul li:nth-child(5){
     background-image: url(../img/airship/airship13.jpg);
+}
+
+.lightbox-image {
+    width: 200px !important;
 }

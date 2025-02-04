@@ -1,33 +1,51 @@
 /* 컨셉아트 페이지 미디어쿼리 CSS - art_media.css */
 
 @media screen and (max-width: 800px) {
-    .art-intro{
-        flex-direction: column;
-    }
+  /* 홀수번째 플렉스 순서 컬럼형 역순 */
+  .art-intro:nth-child(odd) {
+    flex-direction: column-reverse;
+  }
+  /* 짝수번째 플렉스 순서 컬럼형 그대로 */
+  .art-intro:nth-child(even) {
+    flex-direction: column;
+  }
 
-    /* 갤러리 글박스 */
-    .art-intro article{
-        width: 100%;
-        padding: 5vh;
-    }
+  /* 갤러리 글박스 */
+  .art-intro article {
+    width: 100%;
+    padding: 5vh;
+  }
 
-    /* 갤러리 사진박스 */
-    .art-intro aside{
-        width: 100%;
-    }
+  /* 갤러리 사진박스 */
+  .art-intro aside {
+    width: 100%;
+  }
 
-    .art-intro article{
-        text-align: center;
-    }
+  .art-intro article {
+    text-align: center;
+  }
 
-    .art-intro h2{
-        margin-top: 30px;
-        margin-bottom: 30px;
-        font-size: 5vw;
-    }
+  /* 이미지설명 상단 큰 이미지 보이기 */
+  .art-intro article .fx-gallery-box {
+    display: block;
+  }
 
-    .art-intro p {
-        font-size: 2.5vw;
-    }
+  .art-intro h2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 5vw;
+  }
 
+  .art-intro p {
+    font-size: 2.5vw;
+  }
+
+  /* 갤러리박스이 큰 이미지 기기기 */
+  .fx-gallery-box ul li.large {
+    display: none;
+  }
+  /* 갤러리박스 모든 li는 무조건 한줄에 2개씩(width:50%) */
+  .fx-gallery-box ul li {
+    width: 50%;
+  }
 }

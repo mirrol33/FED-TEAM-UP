@@ -19,7 +19,7 @@ const proComponent = {
     </div>
     <div class="product-list">
       <!-- 상품 리스트 -->
-      <div class="product-box" v-for="p in filteredProducts" :key="p.id">
+      <div class="product-box" v-for="p in filterProducts" :key="p.id">
         <a href="#none">
           <img :src="'./images/products/'+ p.id +'.png'" :alt="p.name" />
           <h3>{{ p.name }}</h3>
@@ -79,7 +79,7 @@ const proComponent = {
   },
   computed: {
     // 선택된 카테고리의 상품 목록 필터링
-    filteredProducts() {
+    filterProducts() {
       if (!this.selectedCategory) return this.products;
       return this.products.filter((product) => {
         // cate가 배열인 경우 포함 여부 확인

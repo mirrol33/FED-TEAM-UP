@@ -2,8 +2,7 @@
 
 // 내함수 가져오기 ////
 import myFn from "./my_function.js";
-// [ 스토아 JS 불러오기 ] /////////
-import store from "./store.js";
+
 
 // 컴포넌트 불러오기
 import { headerComponent, footerComponent } from "./layout.js";
@@ -21,7 +20,7 @@ myFn.qs("footer").innerHTML = `<footer-component></footer-component>`;
 // 뷰 인스턴스 생성 ////
 new Vue({
   el: "#app",
-  store,
+  // store,
   components: {
     "header-component": headerComponent,
     "footer-component": footerComponent,

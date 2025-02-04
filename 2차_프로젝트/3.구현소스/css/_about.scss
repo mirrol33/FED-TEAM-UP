@@ -5,7 +5,7 @@
   padding: min(20vw, 120px) 0;
   overflow-x: hidden;
   color: #333;
-  text-align: center;
+  text-align: center;  
   h2 {
     font-size: 1.4rem;
     font-weight: 400;
@@ -16,6 +16,7 @@
     color: #aaa;
   }
   ul {
+    transition: 3s ease-in-out;
     margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);

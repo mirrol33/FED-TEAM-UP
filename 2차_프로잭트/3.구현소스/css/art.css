@@ -135,7 +135,7 @@
 
 /*********************** The Airship 구역 사진 ***********************/
 .gbox4 ul li:nth-child(1) {
-  background-image: url(../img/airship/airship2.jpg);
+  background-image: url(../img/airship/airship13.jpg);
   background-position-y: 45%;
 }
 .gbox4 ul li:nth-child(2) {
@@ -149,7 +149,7 @@
   background-position-x: 32%;
 }
 .gbox4 ul li:nth-child(5) {
-  background-image: url(../img/airship/airship13.jpg);
+  background-image: url(../img/airship/airship2.jpg);
 }
 
 /* 라잇박스 플러그인용 CSS 재설정 */

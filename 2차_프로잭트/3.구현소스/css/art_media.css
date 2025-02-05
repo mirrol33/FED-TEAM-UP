@@ -14,15 +14,13 @@
   .art-intro article {
     width: 100%;
     padding: 5vh;
+    text-align: center;
   }
 
   /* 갤러리 사진박스 */
   .art-intro aside {
     width: 100%;
-  }
-
-  .art-intro article {
-    text-align: center;
+    padding-bottom: 13vh;
   }
 
   /* 이미지설명 상단 큰 이미지 보이기 */
@@ -30,18 +28,20 @@
     display: block;
   }
 
+  /* 갤러리 제목 설정 */
   .art-intro h2 {
     margin-top: 50px;
     margin-bottom: 25px;
     font-size: 5vw;
   }
 
+  /* 갤러리 설명 설정 */
   .art-intro p {
     font-size: 2.5vw;
     padding: 0 5vw 0 5vw;
   }
 
-  /* 갤러리박스이 큰 이미지 기기기 */
+  /* 갤러리박스이 큰 이미지 숨기기 */
   .fx-gallery-box ul li.large {
     display: none;
   }
@@ -50,7 +50,11 @@
     width: 50%;
   }
 
-  /* 라잇박스 플러그인용 CSS 재설정 */
+  .large {
+    border-radius: 30px;
+  }
+
+  /********************************* 라잇박스 플러그인용 CSS 재설정(삭제금지) *********************************/
   #jquery-lightbox,
   #lightbox-container-image-data-box {
     width: 90vw !important;
@@ -73,5 +77,32 @@
   #lightbox-nav-btnPrev,
   #lightbox-nav-btnNext {
     height: 100% !important;
+  }
+
+  /***************** 갤러리 대표사진 클립패스 구역 *****************/
+  .gbox1 ul li:nth-child(2) {
+    clip-path: circle(at center);
+  }
+
+  .gbox2 ul li:nth-child(1) {
+    clip-path: circle(at center);
+  }
+
+  .gbox3 ul li:nth-child(2) {
+    clip-path: circle(at center);
+    background-position: 100%;
+  }
+
+  .gbox4 ul li:nth-child(1) {
+    clip-path: circle(at center);
+  }
+
+  /***************** 4번째 갤러리 사진 순서 변경 *****************/
+  .gbox4 ul li:nth-child(1) {
+    background-image: url(../img/airship/airship10.jpg);
+    background-position: -58%;
+  }
+  .gbox4 ul li:nth-child(3) {
+    background-image: url(../img/airship/airship13.jpg);
   }
 }

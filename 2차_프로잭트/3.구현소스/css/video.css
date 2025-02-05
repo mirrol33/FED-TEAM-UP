@@ -1,2 +1,39 @@
 /* 영상 페이지 CSS - video.css */
+.video-box{
+    position: relative;
 
+    left: 20vw;
+    margin-top: 25vh;
+    width: 80vw;
+    aspect-ratio: 3;
+}
+.black-box{
+    position: absolute;
+    translate: 0 -25%;
+    left: -10vw;
+    width: 30vw;
+    height: 200%;
+    background-color: #000;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

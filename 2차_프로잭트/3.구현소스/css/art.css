@@ -152,6 +152,10 @@
   background-image: url(../img/airship/airship2.jpg);
 }
 
+.gbox4 li a:last-child{
+  display: none;
+}
+
 /* 라잇박스 플러그인용 CSS 재설정 */
 #jquery-lightbox,
 #lightbox-container-image-data-box  {
@@ -175,4 +179,13 @@
 #lightbox-nav-btnPrev,
 #lightbox-nav-btnNext {
   height: 100% !important;
+}
+
+#lightbox-secNav-btnClose {
+  padding-top: 0.7em;
+  
+}
+
+#lightbox-nav {
+  height: 95%;
 }

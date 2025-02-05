@@ -76,7 +76,7 @@
   }
   #lightbox-nav-btnPrev,
   #lightbox-nav-btnNext {
-    height: 100% !important;
+    height: 95% !important;
   }
 
   /***************** 갤러리 대표사진 클립패스 구역 *****************/
@@ -104,5 +104,13 @@
   }
   .gbox4 ul li:nth-child(3) {
     background-image: url(../img/airship/airship13.jpg);
+  }
+
+  .gbox4 li a:first-child {
+    display: none;
+  }
+
+  .gbox4 li a:last-child {
+    display: block;
   }
 }

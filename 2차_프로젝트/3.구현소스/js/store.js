@@ -5,6 +5,12 @@ import proData from "../data/goods.json" with { type: "json" };
 
 export default new Vuex.Store({
   state: proData,
+  computed: {
+    ...mapState(["selectedCategory"]),
+    // selectedCategory(){return this.$store.state.selectedCategory}
+    ...mapGetter(["filterProducts"])
+    // filterProducts(){return this.$store.getters.filterProducts}
+  }
   // mutations: {},
   // actions: {},
   // getters: {},

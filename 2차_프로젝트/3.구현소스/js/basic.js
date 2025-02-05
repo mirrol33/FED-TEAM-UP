@@ -4,7 +4,7 @@
 import myFn from "./my_function.js";
 
 // Vuex store 불러오기
-// import store from "./store.js";
+import store from "./store.js";
 import proComp from "./products.js";
 
 // 다른 컴포넌트 불러오기
@@ -31,7 +31,7 @@ new Vue({
     "join-comp": joinComp,
     "login-comp": loginComp,
   },
-  // store,
+  store,
   // data: () => ({}),
   // methods: {},
   // mounted() {},

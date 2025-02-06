@@ -1,9 +1,10 @@
+// layout.js
 // 상단 컴포넌트 ////
 const headerComp = {
   template: `
   <div class="header">
     <div class="header_inner">
-      <h1><a href="./"><img src="./images/layout/logo.png" alt="logo" /></a></h1>    
+      <h1><a href="./"><img src="./images/layout/logo.png" alt="logo" /></a></h1>
       <nav class="header-menu">
         <ul>
         <li v-for="(menu, idx) in menus" :key="idx">
@@ -11,26 +12,21 @@ const headerComp = {
         </li>
         </ul>
       </nav>
+      <!-- 회원 추가메뉴 -->
       <nav class="add-menu">
-        <ol>
-          <li 
-          v-for="
-            (v,k) in addMenu
-            /* v - 객체값, k - 키명 */
-          "
-          :key="k"
-          :class="
-            // 키명이 '로그아웃'이면 'hide' 클래스넣기
-            k=='로그아웃' ? 'hide' : ''
-          ">
-            <a href="#"
-            @click.prevent="goPage(k)"
+          <ol :class="loginCls">
+            <li 
+              v-for="(v,k) in addMenu"
             >
-            <i :class="v" :title="k"></i>
-            </a>
-          </li>
-        </ol>
-      </nav>
+              <a 
+                href="#"
+                @click.prevent="goPage(k)"
+              >
+                <i :class="v" :title="k"></i>
+              </a>
+            </li>
+          </ol>
+        </nav>
     </div>
     <div @click="toggleShow" class="ham-nav-btn">
       <a href="#none">
@@ -66,7 +62,7 @@ const headerComp = {
       로그인: "fa-solid fa-right-to-bracket",
       로그아웃: "fa-solid fa-right-from-bracket",
       회원가입: "fa-solid fa-user",
-      // 장바구니: "fa-solid fa-cart-shopping",
+      장바구니: "fa-solid fa-cart-shopping",
     },
     // 햄버거 메뉴 토글 상태
     show: false,
@@ -135,6 +131,9 @@ const headerComp = {
       switch (gubun) {
         case "로그인":
           pgName = "login";
+          break;
+        case "로그아웃":
+          pgName = "index";
           break;
         case "회원가입":
           pgName = "member";

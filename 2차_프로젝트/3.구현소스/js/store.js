@@ -2,6 +2,8 @@ import proData from "../data/goods.json" with { type: "json" };
 
 export default new Vuex.Store({
   state: {
+    // 로그인 클래스
+    loginCls: "",
     products: proData,
     selectedCategory: null,
     cart: [],

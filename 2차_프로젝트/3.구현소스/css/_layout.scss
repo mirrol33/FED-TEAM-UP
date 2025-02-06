@@ -199,8 +199,30 @@ header {
       justify-content: flex-start;
       gap: 10px;
     }
-    li.hide {
-      display: none;
+    // li.hide {
+    //   display: none;
+    // }
+    li {
+      // 링크공통
+      a {
+        letter-spacing: 2px;
+      }
+      // 2번째 li 숨기기
+      &:nth-child(2){
+        display: none;
+      }
+    }
+    // 로그인 클래스일 경우 보이기/숨기기
+    &.login{
+      // 2번째 로그아웃 보이기
+      li:nth-child(2){
+        display: block;
+      }
+      // 1,3번 로그인,회원가입 숨기기
+      li:nth-child(1),
+      li:nth-child(3) {
+        display: none;
+      }
     }
   }
 }

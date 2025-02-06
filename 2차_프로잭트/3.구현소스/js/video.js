@@ -107,3 +107,8 @@ function playMovie(mcode) {
   document.body.classList.add("on");
 } ///////////// playMovie 함수 ///////////
 ///////////////////////////////////////////
+
+
+window.addEventListener("resize", function(){
+  window.location.reload();
+})

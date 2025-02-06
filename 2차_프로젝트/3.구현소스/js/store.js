@@ -9,6 +9,7 @@ export default new Vuex.Store({
     products: proData,
     selectedCategory: null,
     cart: [], // 장바구니 배열 추가
+    
   },
   mutations: {
     setProducts(state, products) {
@@ -20,18 +21,27 @@ export default new Vuex.Store({
     addToCart(state, product) {
       // console.log(state, product);
       const itemInCart = state.cart.find((item) => item.id === product.id);
-      if (itemInCart) {
-        console.log('카트상품재고:',product.inventory);
-        console.log('카트상품수량:',itemInCart.quantity);
-        if (product.inventory > 0)
-          if(itemInCart.quantity == product.inventory){
-            console.log('재고부족!');
-          } else {
-            itemInCart.quantity += 1;
-          }
-      } else {
-        state.cart.push({...product, quantity: 1});
+
+      if (product.inventory > 0) {
+        product.inventory -= 1;
+        console.log('카트상품재고:',product,product.inventory);
+        if(product.inventory == 0){
+          // 해당 상품의 클래스 추가
+          console.log('카트상품id:',product.id);
+        }
       }
+
+      // if (itemInCart) {
+      //   if (product.inventory > 0) // 상품재고 있을때
+      //     if(itemInCart.quantity >= product.inventory){
+      //       alert("선택하신 상품의 재고가 부족합니다!");
+      //       console.log('카트상품수량:',itemInCart.quantity);
+      //     } else {
+      //       itemInCart.quantity += 1;
+      //     }
+      // } else {
+      //   state.cart.push({...product, quantity: 1});
+      // }
     },
     removeFromCart(state, product) {
       // console.log(state, product, product.id);

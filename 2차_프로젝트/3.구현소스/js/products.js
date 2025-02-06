@@ -16,7 +16,7 @@ const proComponent = {
     <div class="product-list">
       <!-- 상품 리스트 -->
       <div class="product-box" v-for="p in filterProducts" :key="p.id">
-        <a href="#none">
+        <a href="#none" :class="'pro-'+p.id">
           <img :src="'./images/products/'+ p.id +'.png'" :alt="p.name" />
           <h3>{{ p.name }}</h3>
           <p>{{ p.simple }}</p>

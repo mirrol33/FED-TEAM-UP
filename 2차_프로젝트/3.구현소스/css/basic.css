@@ -433,6 +433,45 @@ footer .footer p {
   box-sizing: border-box;
   overflow: hidden;
 }
+.products-wrap .cart-list-aside {
+  position: fixed;
+  top: 10%;
+  right: 0;
+  width: auto;
+  height: 90vh;
+  max-width: 20%;
+  padding: 40px;
+  background-color: #f1f1f1;
+  text-align: left;
+  transition: 0.3s ease-in-out;
+  translate: 100%;
+}
+.products-wrap .cart-list-aside.open {
+  translate: 0%;
+}
+.products-wrap .cart-list-aside .thumbnail {
+  position: relative;
+  width: 100px;
+  height: auto;
+}
+.products-wrap .cart-list-aside .thumbnail img {
+  width: 100%;
+}
+.products-wrap .cart-list-aside .cart-toggle-btn {
+  position: absolute;
+  top: 50%;
+  left: -28px;
+  width: 28px;
+  height: 28px;
+  padding: 4px;
+  box-sizing: border-box;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+.products-wrap .cart-list-aside .cart-toggle-btn i {
+  font-size: 0.8rem;
+}
 @media (max-width: 1200px) {
   .products-wrap .product-list {
     grid-template-columns: repeat(3, 1fr);

@@ -94,6 +94,45 @@
       }
     }
   }
+  .cart-list-aside {
+    position: fixed;
+    top: 10%;
+    right: 0;
+    width: auto;
+    height: 90vh;
+    max-width: 20%;
+    padding: 40px;  
+    background-color: #f1f1f1;
+    text-align: left;
+    transition: .3s ease-in-out;
+    translate: 100%;
+    &.open {
+      translate: 0%;
+    }
+    .thumbnail {
+      position: relative;
+      width: 100px;
+      height: auto;
+      img {
+        width: 100%;
+      }
+    }
+    .cart-toggle-btn {
+      position: absolute;
+      top: 50%;
+      left: -28px;
+      width: 28px;
+      height: 28px;
+      padding: 4px;
+      box-sizing: border-box;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      i {
+        font-size: 0.8rem;
+      }
+    }
+  }
   @include tablet-medium {
     .product-list {
       grid-template-columns: repeat(3, 1fr);

@@ -1,8 +1,18 @@
 /* 영상 페이지 CSS - video.css */
 
 /* 구역표시 */
-html, body{
+/* html,
+body * {
   outline: 1px dashed red;
+} */
+
+/* 드레그 방지 */
+div {
+  -webkit-touch-callout: none;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
 }
 
 .video-box {
@@ -22,17 +32,29 @@ html, body{
   background-color: #000;
 }
 
-.arrow-icon{
+.black-box h2 {
+  position: absolute;
+  color: #fff;
+  top: 2vw;
+  left: 3vw;
+  font-size: 3vw;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.arrow-icon {
+  display: flex;
   position: absolute;
   bottom: 10%;
-  left: 5%;
+  left: 15%;
+  gap: 20px;
+  font-size: 1.2vw;
 }
 .arrow-icon i {
-  
   color: #ffffff;
   width: 50px;
   height: 50px;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   border-radius: 50%;
   text-align: center;
   line-height: 50px;
@@ -42,9 +64,8 @@ html, body{
   width: 100%;
   height: 100%;
   overflow: hidden;
-}
-.swiper-wrapper{
-  
+  right: 50px;
+  top: 40px;
 }
 
 .swiper-slide {
@@ -57,24 +78,30 @@ html, body{
   align-items: center;
 }
 
-.swiper-slide::after{
-  content: 'dd';
+/* .swiper-slide::after {
+  content: "dd";
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 2vh;
+  right: 1vw;
   z-index: 99;
   color: #fff;
+} */
+
+.player-icon {
+  position: absolute;
+  bottom: 2vh;
+  right: 1.5vw;
+  font-size: 2vw;
 }
 
-.swiper-slide p{
+.swiper-slide p {
   position: absolute;
   top: 100%;
   box-sizing: border-box;
-  text-shadow: 0 0 3px #fff;
-  text-align: center;
+  text-align: right;
   width: 100%;
-  padding: 20px;
-
+  padding-top: 10px;
+  font-weight: 600;
 }
 
 .swiper-slide img {
@@ -96,11 +123,13 @@ html, body{
   text-align: right;
 }
 
-.swiper-pagination{
-  top: 60% !important;
-  left: 10% !important;
+.swiper-pagination {
   text-align-last: left;
+  bottom: 77px !important;
+  left: 300px !important;
+  width: auto !important;
 }
-.swiper-pagination-bullet{
+
+.swiper-pagination-bullet {
   background: #ccc;
 }

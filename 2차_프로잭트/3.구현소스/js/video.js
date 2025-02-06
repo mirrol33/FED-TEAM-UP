@@ -7,6 +7,7 @@ var swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  // 자동 넘김 기능
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
@@ -30,10 +31,7 @@ tg.forEach((el) => {
   };
 });
 
-/*****************************************
-    함수명 : playMovie
-    기능 : 영화예고편 화면 띄우기
-*****************************************/
+// 
 function playMovie(mcode) {
   // mcode 영화아이디
   // 함수호출 및 전달값 확인

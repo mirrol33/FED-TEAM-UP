@@ -3,12 +3,18 @@ import proData from "../data/goods.json" with { type: "json" };
 export default new Vuex.Store({
   state: {
     // 로그인 클래스
-    loginCls: "",
+    loginCls: sessionStorage.getItem("login-user") ? "login" : "",
     products: proData,
     selectedCategory: null,
     cart: [],
   },
   mutations: {
+    setLogin(state) {
+      state.loginCls = "login"; // 로그인 상태 변경
+    },
+    setLogout(state) {
+      state.loginCls = ""; // 로그아웃 상태 변경
+    },
     setProducts(state, products) {
       state.products = products;
     },
@@ -17,7 +23,7 @@ export default new Vuex.Store({
     },
     // 장바구니 상품 담기
     addToCart(state, product) {
-      const itemInCart = state.cart.find((item) => item.id === product.id);      
+      const itemInCart = state.cart.find((item) => item.id === product.id);
         product.inventory -= 1; // 재고 감소
         if (itemInCart) {
           itemInCart.quantity += 1;

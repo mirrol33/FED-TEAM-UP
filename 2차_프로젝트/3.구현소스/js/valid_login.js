@@ -1,8 +1,10 @@
 // valid_login.js
 
+// Vuex store 가져오기
+import store from "./store.js"; 
 export default function validLogin(cbFn) {
   // cbFn : 뷰 메서드를 받아옴!
-  console.log("로그인검사~!",cbFn);
+  console.log("로그인검사~!", cbFn);
   /**************************************** 
         로그인 페이지 유효성 검사
     ****************************************/
@@ -68,7 +70,10 @@ export default function validLogin(cbFn) {
         // -> '로그인에 성공하였습니다!'
         else {
           // alert("로그인에 성공하였습니다!");
-          cbFn(result,"성공한겨!");
+          // 로그인 성공
+          sessionStorage.setItem("login-user", result.userid); // 세션 저장
+          store.commit("setLogin"); // Vuex 상태 업데이트
+          cbFn(result, "성공!");
         } /// else : 로그인 성공시 ///
       } ///// else : 아이디가 있는 경우 ////
     } /////// else : 아이디,비번 모두입력시 ////////

@@ -205,18 +205,15 @@ header .add-menu ol {
   justify-content: flex-start;
   gap: 10px;
 }
-header .add-menu li a {
-  letter-spacing: 2px;
-}
-header .add-menu li:nth-child(2) {
+header .add-menu ol li:nth-child(2) {
   display: none;
 }
-header .add-menu.login li:nth-child(2) {
+header .add-menu ol.login li:nth-child(1),
+header .add-menu ol.login li:nth-child(3) {
+  display: none;
+}
+header .add-menu ol.login li:nth-child(2) {
   display: block;
-}
-header .add-menu.login li:nth-child(1),
-header .add-menu.login li:nth-child(3) {
-  display: none;
 }
 
 /*********** main 컨텐츠영역 ***********/

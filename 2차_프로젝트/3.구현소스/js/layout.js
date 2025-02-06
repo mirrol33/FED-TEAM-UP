@@ -1,4 +1,5 @@
 // layout.js
+import store from "./store.js"; // Vuex store 가져오기
 // 상단 컴포넌트 ////
 const headerComp = {
   template: `
@@ -14,18 +15,16 @@ const headerComp = {
       </nav>
       <!-- 회원 추가메뉴 -->
       <nav class="add-menu">
-          <ol :class="loginCls">
+          <ol :class="$store.state.loginCls">
             <li 
               v-for="(v,k) in addMenu"
+              @click.prevent="handleMenuClick(k)"
             >
-              <a 
-                href="#"
-                @click.prevent="goPage(k)"
-              >
-                <i :class="v" :title="k"></i>
-              </a>
-            </li>
-          </ol>
+            <a href="#">
+              <i :class="v" :title="k"></i>
+            </a>
+          </li>
+        </ol>
         </nav>
     </div>
     <div @click="toggleShow" class="ham-nav-btn">
@@ -48,6 +47,11 @@ const headerComp = {
     </div>
   </div>
   `,
+  // computed: {
+  //   loginCls() {
+  //     return this.$store.state.loginCls; // Vuex에서 상태 가져오기
+  //   }
+  // },
   data: () => ({
     // 메뉴 리스트
     menus: [
@@ -62,7 +66,7 @@ const headerComp = {
       로그인: "fa-solid fa-right-to-bracket",
       로그아웃: "fa-solid fa-right-from-bracket",
       회원가입: "fa-solid fa-user",
-      장바구니: "fa-solid fa-cart-shopping",
+      // 장바구니: "fa-solid fa-cart-shopping",
     },
     // 햄버거 메뉴 토글 상태
     show: false,
@@ -121,6 +125,13 @@ const headerComp = {
       }
       this.preScrollTop = nextScrollTop;
     },
+    handleMenuClick(gubun) {
+      if (gubun === "로그아웃") {
+        this.logout();
+      } else {
+        this.goPage(gubun);
+      }
+    },
     // 회원메뉴 링크이동 함수 : goPage
     goPage(gubun) {
       // gubun - 구분키(키명)
@@ -138,13 +149,20 @@ const headerComp = {
         case "회원가입":
           pgName = "member";
           break;
-        case "장바구니":
-          pgName = "cart_list";
-          break;
+        // case "장바구니":
+        //   pgName = "cart_list";
+        //   break;
       } /// switch ///
       // 페이지 이동하기 //
       location.href = pgName + ".html";
     }, /// goPage 메서드 ///
+    logout() {
+      if (confirm("로그아웃 하시겠습니까?")) {
+        sessionStorage.removeItem("login-user"); // 로그인 정보 삭제
+        store.commit("setLogout"); // Vuex 상태 업데이트
+        location.href = "index.html"; // 메인 페이지로 이동
+      }
+    }, /// logout ///
     // 모바일버전 체크 함수
     isMobile() {
       return (

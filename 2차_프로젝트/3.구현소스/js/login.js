@@ -14,7 +14,7 @@ const loginComp = {
            <!-- 2-1. 로그인 페이지 상단영역 --> 
           
              <!-- 2-1-1. 서브타이틀 --> 
-            <h2 class="stit">Login</h2>
+            <h2 class="stit">Login {{msg}} </h2>
           
            <!-- 2-2. 갤러리 페이지 컨텐츠 박스 --> 
           <section class="scont">
@@ -100,7 +100,7 @@ const loginComp = {
         // this.$router.push('/');
         
         // 첫번째 페이지 / 로 이동
-        window.location.href = './';
+        // window.location.href = './';
       }
     },
     // 4. 데이터셋업파트

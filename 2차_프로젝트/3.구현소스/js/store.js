@@ -1,15 +1,10 @@
-// store.js
-
-// JSON 상품 데이터 불러오기
 import proData from "../data/goods.json" with { type: "json" };
 
-// store.js
 export default new Vuex.Store({
   state: {
     products: proData,
     selectedCategory: null,
-    cart: [], // 장바구니 배열 추가
-    
+    cart: [],
   },
   mutations: {
     setProducts(state, products) {
@@ -18,45 +13,59 @@ export default new Vuex.Store({
     setCategory(state, category) {
       state.selectedCategory = category;
     },
+    // 장바구니 상품 담기
     addToCart(state, product) {
-      // console.log(state, product);
-      const itemInCart = state.cart.find((item) => item.id === product.id);
-
-      if (product.inventory > 0) {
-        product.inventory -= 1;
-        console.log('카트상품재고:',product,product.inventory);
-        if(product.inventory == 0){
-          // 해당 상품의 클래스 추가
-          console.log('카트상품id:',product.id);
+      const itemInCart = state.cart.find((item) => item.id === product.id);      
+        product.inventory -= 1; // 재고 감소
+        if (itemInCart) {
+          itemInCart.quantity += 1;
+        } else {
+          state.cart.push({ ...product, quantity: 1 });
         }
-      }
+    },
+    // 장바구니 상품 삭제
+    removeFromCart(state, productId) {
+      const cartIndex = state.cart.findIndex((item) => item.id === productId);
 
-      // if (itemInCart) {
-      //   if (product.inventory > 0) // 상품재고 있을때
-      //     if(itemInCart.quantity >= product.inventory){
-      //       alert("선택하신 상품의 재고가 부족합니다!");
-      //       console.log('카트상품수량:',itemInCart.quantity);
-      //     } else {
-      //       itemInCart.quantity += 1;
-      //     }
-      // } else {
-      //   state.cart.push({...product, quantity: 1});
-      // }
+      if (cartIndex !== -1) {
+        const cartItem = state.cart[cartIndex];
+        const storeProduct = state.products.find((p) => p.id === productId);
+
+        if (storeProduct) {
+          storeProduct.inventory += cartItem.quantity; // 재고 복원
+        }
+
+        state.cart.splice(cartIndex, 1); // 장바구니에서 삭제
+      }
     },
-    removeFromCart(state, product) {
-      // console.log(state, product, product.id);
-      state.cart = state.cart.filter((item) => item.id !== product);
+    increaseQt(state, productId){
+      const item = state.cart.find((item) => item.id === productId);
+      const product = state.products.find((p) => p.id === productId);
+      if(item && product && product.inventory > 0){
+        item.quantity += 1;
+        product.inventory -= 1;
+      } else {
+        alert("상품재고가 없습니다!");
+      }
     },
+    decreaseQt(state, productId){
+      const item = state.cart.find((item) => item.id === productId);
+      const product = state.products.find((p) => p.id === productId);
+      if (item && item.quantity > 1) {
+        item.quantity -= 1;
+        product.inventory += 1;
+      }
+    },    
   },
   getters: {
     filterProducts: (state) => {
       if (!state.selectedCategory) return state.products;
-      return state.products.filter((product) => {
-        return Array.isArray(product.cate) ? product.cate.includes(state.selectedCategory) : product.cate === state.selectedCategory;
-      });
+      return state.products.filter((product) =>
+        Array.isArray(product.cate) ? product.cate.includes(state.selectedCategory) : product.cate === state.selectedCategory
+      );
     },
     totalPrice: (state) => {
-      return state.cart.reduce((sum, item) => sum + item.sale, 0);
+      return state.cart.reduce((sum, item) => sum + item.sale * item.quantity, 0);
     },
   },
 });

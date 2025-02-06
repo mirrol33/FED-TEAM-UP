@@ -16,7 +16,7 @@ const proComponent = {
     <div class="product-list">
       <!-- 상품 리스트 -->
       <div class="product-box" v-for="p in filterProducts" :key="p.id">
-        <a href="#none" :class="'pro-'+p.id">
+        <a href="#none" :class="p.inventory==0?'soldout':''">
           <img :src="'./images/products/'+ p.id +'.png'" :alt="p.name" />
           <h3>{{ p.name }}</h3>
           <p>{{ p.simple }}</p>
@@ -42,7 +42,11 @@ const proComponent = {
             {{ discountRate(p) }}%
           </span>
           <span class="inventory"> 재고수량: {{p.inventory}} </span>
-          <button @click="openSide(addToCart(p))">ADD TO CART</button>
+          <button 
+            :disabled="p.inventory == 0" 
+            :class="{ 'disabled': p.inventory == 0 }"
+            @click="p.inventory > 0 && openSide(addToCart(p))"
+          >ADD TO CART</button>
         </a>
       </div>
     </div>
@@ -52,7 +56,7 @@ const proComponent = {
       <h3>장바구니 목록</h3>
       <div class="inner">
         <div class="list">
-          <ul>
+          <ul v-if="cart.length > 0">
             <li v-for="i in cart" :key="i.id">
               <div class="thumbnail">
                 <img :src="'./images/products/' + i.id + '.png'" :alt="i.name" />
@@ -69,11 +73,16 @@ const proComponent = {
                 :style="{ display: discountRate(i) > 0 ? 'inline' : 'none' 
                 }">
                 할인가 : {{ formatPrice(i.sale) }} 원</p>
-                <p class="qt">수량: {{ i.quantity }}</p>
+                <div class="qt">
+                  <button @click="decreaseQt(i.id)">-</button>
+                  <span>{{ i.quantity }}</span>
+                  <button @click="increaseQt(i.id)">+</button>
+                </div>
               </div>
-              <button @click="removeFromCart(i.id)">X</button>
+              <button class="del-btn" @click="removeFromCart(i.id)">X</button>
             </li>
           </ul>
+          <p v-else class="empty-message">장바구니가 비어 있습니다.</p>
           </div>
           </div>
           <div class="total-price">
@@ -97,7 +106,7 @@ const proComponent = {
   methods: {
     // Vuex의 Mutation 사용
     // setCategory(cate){this.$store.commit("setCategory", cate)}
-    ...Vuex.mapMutations(["setCategory", "addToCart", "removeFromCart"]),
+    ...Vuex.mapMutations(["setCategory", "addToCart", "removeFromCart", "decreaseQt", "increaseQt"]),
 
     selectCategory(cate, text) {
       this.setCategory(cate);
@@ -106,7 +115,9 @@ const proComponent = {
 
     // 할인율 계산
     discountRate(product) {
-      return product.price > product.sale ? Math.round(((product.price - product.sale) / product.price) * 100) : 0;
+      return product.price > product.sale
+        ? Math.round(((product.price - product.sale) / product.price) * 100)
+        : 0;
     },
 
     // 숫자에 콤마 추가

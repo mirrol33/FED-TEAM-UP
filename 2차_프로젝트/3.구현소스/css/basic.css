@@ -394,6 +394,10 @@ footer .footer p {
   overflow: hidden;
   cursor: default;
 }
+.products-wrap .product-list .product-box a.soldout {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
 .products-wrap .product-list .product-box a h3 {
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -437,9 +441,9 @@ footer .footer p {
   position: fixed;
   top: 10vh;
   right: 0;
-  width: auto;
+  width: 400px;
+  max-width: 90%;
   height: 80vh;
-  max-width: 24%;
   padding: 12px;
   background-color: #fff;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3137254902);
@@ -454,6 +458,7 @@ footer .footer p {
 .products-wrap .cart-list-aside h3 {
   font-weight: 700;
   margin-bottom: 12px;
+  text-align: center;
 }
 .products-wrap .cart-list-aside .inner {
   position: relative;
@@ -477,7 +482,7 @@ footer .footer p {
 .products-wrap .cart-list-aside .list ul li .thumbnail img {
   width: 100%;
 }
-.products-wrap .cart-list-aside .list ul li button {
+.products-wrap .cart-list-aside .list ul li .del-btn {
   position: absolute;
   width: 24px;
   height: 24px;
@@ -485,6 +490,7 @@ footer .footer p {
   color: #fff;
   border: none;
   font-size: 0.7rem;
+  cursor: pointer;
 }
 .products-wrap .cart-list-aside .list ul li .info {
   font-size: 0.8rem;
@@ -506,6 +512,21 @@ footer .footer p {
 }
 .products-wrap .cart-list-aside .list ul li .info .qt {
   margin-top: 8px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.products-wrap .cart-list-aside .list ul li .info .qt button {
+  border: 0;
+  background-color: #333;
+  color: #fff;
+  width: 24px;
+  height: 24px;
+}
+.products-wrap .cart-list-aside .list .empty-message {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
 }
 .products-wrap .cart-list-aside .cart-toggle-btn {
   position: absolute;
@@ -528,6 +549,17 @@ footer .footer p {
 }
 .products-wrap .cart-list-aside.open .cart-toggle-btn i {
   transform: rotate(0deg);
+}
+.products-wrap .cart-list-aside .total-price {
+  text-align: right;
+}
+.products-wrap .cart-list-aside .total-price button {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border: 0;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
 }
 @media (max-width: 1200px) {
   .products-wrap .product-list {

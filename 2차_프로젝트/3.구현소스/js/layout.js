@@ -66,7 +66,7 @@ const headerComp = {
       로그인: "fa-solid fa-right-to-bracket",
       로그아웃: "fa-solid fa-right-from-bracket",
       회원가입: "fa-solid fa-user",
-      장바구니: "fa-solid fa-cart-shopping",
+      // 장바구니: "fa-solid fa-cart-shopping",
     },
     // 햄버거 메뉴 토글 상태
     show: false,

@@ -472,7 +472,7 @@ footer .footer p {
   position: relative;
   width: 40%;
   height: auto;
-  margin-right: 4px;
+  margin-right: 8px;
 }
 .products-wrap .cart-list-aside .list ul li .thumbnail img {
   width: 100%;
@@ -491,7 +491,9 @@ footer .footer p {
   color: #333;
 }
 .products-wrap .cart-list-aside .list ul li .info h4 {
+  font-size: 1rem;
   font-weight: 600;
+  margin-bottom: 8px;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
@@ -501,6 +503,9 @@ footer .footer p {
 }
 .products-wrap .cart-list-aside .list ul li .info .sale {
   color: red;
+}
+.products-wrap .cart-list-aside .list ul li .info .qt {
+  margin-top: 8px;
 }
 .products-wrap .cart-list-aside .cart-toggle-btn {
   position: absolute;

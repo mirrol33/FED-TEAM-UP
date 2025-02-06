@@ -48,7 +48,7 @@ const proComponent = {
     </div>
     <!-- 장바구니 -->
     <aside class="cart-list-aside">
-      <a href="#none" class="cart-toggle-btn" @click="closeSide()"><i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#none" class="cart-toggle-btn" @click="toggleSide()"><i class="fa-solid fa-arrow-right"></i></a>
       <h3>장바구니 목록</h3>
       <div class="inner">
         <div class="list">
@@ -64,9 +64,12 @@ const proComponent = {
                   textDecoration: discountRate(i) > 0 ? 'line-through' : 'none', 
                   color: discountRate(i) > 0 ? '#aaa' : '#000' 
                 }">
-                {{ formatPrice(i.price) }} 원</p>
-                <p class="sale" :style="{ display: discountRate(i) > 0 ? 'inline' : 'none' }">{{ formatPrice(i.sale) }} 원</p>
-                <p>수량: {{ i.quantity }}</p>
+                판매가 : {{ formatPrice(i.price) }} 원</p>
+                <p class="sale" 
+                :style="{ display: discountRate(i) > 0 ? 'inline' : 'none' 
+                }">
+                할인가 : {{ formatPrice(i.sale) }} 원</p>
+                <p class="qt">수량: {{ i.quantity }}</p>
               </div>
               <button @click="removeFromCart(i.id)">X</button>
             </li>
@@ -110,13 +113,14 @@ const proComponent = {
     formatPrice(price) {
       return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     },
-
+    // 장바구니 팝업창 열기
     openSide() {
       if (!$(".cart-list-aside").hasClass("open")) {
         $(".cart-list-aside").addClass("open");
       }
     },
-    closeSide() {
+    // 장바구니 팝업창 토글버튼
+    toggleSide() {
       if (!$(".cart-list-aside").hasClass("open")) {
         $(".cart-list-aside").addClass("open");
       } else {

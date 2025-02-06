@@ -133,7 +133,7 @@
             position: relative;
             width: 40%;
             height: auto;
-            margin-right: 4px;
+            margin-right: 8px;
             img {
               width: 100%;
             }
@@ -151,7 +151,9 @@
             font-size: 0.8rem;
             color: #333;
             h4 {
+              font-size: 1rem;
               font-weight: 600;
+              margin-bottom: 8px;
               // 한줄이상 말줄임
               display: -webkit-box;
               -webkit-line-clamp: 1;
@@ -162,6 +164,9 @@
             }
             .sale {
               color: red;
+            }
+            .qt {
+              margin-top: 8px;
             }
           }
         }

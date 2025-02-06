@@ -18,17 +18,23 @@ export default new Vuex.Store({
       state.selectedCategory = category;
     },
     addToCart(state, product) {
-      console.log(state, product, product.id, product.inventory);
+      // console.log(state, product);
       const itemInCart = state.cart.find((item) => item.id === product.id);
       if (itemInCart) {
-        if (product.inventory > 0) 
-          itemInCart.quantity += 1;
+        console.log('카트상품재고:',product.inventory);
+        console.log('카트상품수량:',itemInCart.quantity);
+        if (product.inventory > 0)
+          if(itemInCart.quantity == product.inventory){
+            console.log('재고부족!');
+          } else {
+            itemInCart.quantity += 1;
+          }
       } else {
         state.cart.push({...product, quantity: 1});
       }
     },
     removeFromCart(state, product) {
-      console.log(state, product, product.id);
+      // console.log(state, product, product.id);
       state.cart = state.cart.filter((item) => item.id !== product);
     },
   },

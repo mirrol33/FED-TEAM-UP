@@ -7,9 +7,18 @@ var swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
 });
 
 const tg = document.querySelectorAll(".swiper-slide");
+
+const btns = document.querySelectorAll('.arrow-icon i');
+
+btns[0].onclick = ()=> swiper.slidePrev();
+btns[1].onclick = ()=> swiper.slideNext();
 
 tg.forEach((el) => {
   el.onclick = (e) => {

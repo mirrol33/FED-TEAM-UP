@@ -24,7 +24,7 @@ var swiper = new Swiper(".mySwiper", {
       spaceBetween: 10
     },
     // when window width is >= 640px
-    1200: {
+    1000: {
       slidesPerView: 3,
       spaceBetween: 20
     }
@@ -84,7 +84,7 @@ function playMovie(mcode) {
   css.width = "70vw";
   css.aspectRatio = "16/9";
   css.backgroundColor = "#000";
-
+  
   // 4. 아이프레임 CSS설정
   let ifr = mv.querySelector("iframe");
   let ifrcss = ifr.style;

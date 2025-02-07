@@ -1,4 +1,5 @@
 /* 컨셉아트 페이지 CSS - story.css */
+.story {position: relative; margin: 0 auto;clear: both;overflow: hidden; z-index: -1;}
 
 /* 소개박스 */
 .art-intro {

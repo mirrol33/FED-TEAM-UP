@@ -1,5 +1,5 @@
 /* 영상 페이지 CSS - video.css */
-.video {position: relative;margin: 0 auto;height: 100vh;clear: both;overflow: hidden;}
+.video {position: relative;margin: 0 auto;height: 100vh;clear: both;overflow: hidden; z-index: -1;}
 
 /* 구역표시 */
 /* html,

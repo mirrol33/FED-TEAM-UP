@@ -46,6 +46,7 @@ export default new Vuex.Store({
         state.cart.splice(cartIndex, 1); // 장바구니에서 삭제
       }
     },
+    // 장바구니 상품 수량 증가
     increaseQt(state, productId){
       const item = state.cart.find((item) => item.id === productId);
       const product = state.products.find((p) => p.id === productId);
@@ -56,6 +57,7 @@ export default new Vuex.Store({
         alert("상품재고가 없습니다!");
       }
     },
+    // 장바구니 상품 수량 감소
     decreaseQt(state, productId){
       const item = state.cart.find((item) => item.id === productId);
       const product = state.products.find((p) => p.id === productId);
@@ -63,8 +65,9 @@ export default new Vuex.Store({
         item.quantity -= 1;
         product.inventory += 1;
       }
-    },    
+    },
   },
+  // 상품 카테고리별 필터처리
   getters: {
     filterProducts: (state) => {
       if (!state.selectedCategory) return state.products;
@@ -72,6 +75,7 @@ export default new Vuex.Store({
         Array.isArray(product.cate) ? product.cate.includes(state.selectedCategory) : product.cate === state.selectedCategory
       );
     },
+    // 장바구니 담긴 상품 총 가격
     totalPrice: (state) => {
       return state.cart.reduce((sum, item) => sum + item.sale * item.quantity, 0);
     },

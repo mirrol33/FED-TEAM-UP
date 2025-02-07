@@ -6,7 +6,8 @@ body * {
   outline: 1px dashed red;
 } */
 
-html,body{
+html,
+body {
   overflow-x: hidden;
   height: 100vh;
 }
@@ -18,7 +19,6 @@ div {
   -webkit-user-drag: none;
 }
 
-
 .video-box {
   position: relative;
 
@@ -29,8 +29,8 @@ div {
 }
 .black-box {
   position: absolute;
-  top: -15%;
-  left: -20%;
+  top: -30%;
+  left: -17%;
   width: 25vw;
   height: 150%;
   background-color: #000;
@@ -65,12 +65,12 @@ div {
   cursor: pointer;
 }
 .swiper {
-  width: 115%;
+  width: 109%;
   height: 100%;
   overflow: hidden;
-  right: 50px;
+  /* right: 50px; */
   top: 40px;
-  padding-right: 50vw;
+  /* padding-right: 50vw; */
 }
 
 .player-icon {
@@ -79,7 +79,6 @@ div {
   right: 1.5vw;
   font-size: 2vw;
 }
-
 
 .swiper-slide {
   position: relative;
@@ -105,7 +104,6 @@ div {
   z-index: 99;
   color: #fff;
 } */
-
 
 .swiper-slide p {
   position: absolute;
@@ -138,7 +136,10 @@ div {
 .swiper-pagination-bullet {
   background: #ccc;
 }
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
   width: 200px !important;
   position: absolute;
   bottom: 13% !important;

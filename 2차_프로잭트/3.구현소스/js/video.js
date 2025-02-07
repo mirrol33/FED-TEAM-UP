@@ -8,10 +8,10 @@ var swiper = new Swiper(".mySwiper", {
     clickable: true,
   },
   // 자동 넘김 기능
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
 });
 
 const tg = document.querySelectorAll(".swiper-slide");

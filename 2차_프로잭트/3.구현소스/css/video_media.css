@@ -2,5 +2,14 @@
 
 @media screen and (max-width: 800px) {
 
+    .black-box {
+        position: absolute;
+        top: -30%;
+        left: -17%;
+        width: 450px;
+        aspect-ratio: .7;
+        /* height: 150%; */
+        background-color: #000;
+      }
     
 }

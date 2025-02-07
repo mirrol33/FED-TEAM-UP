@@ -2,11 +2,33 @@
 
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 3,
-  spaceBetween: 30,
+  spaceBetween: 20,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
+  // 사이즈별 변경
+  breakpoints: {
+    // when window width is >= 100px
+    100: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
+    // when window width is >= 480px
+    500: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
+    800: {
+      slidesPerView: 2,
+      spaceBetween: 10
+    },
+    // when window width is >= 640px
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    }
+  }
   // 자동 넘김 기능
   // autoplay: {
   //   delay: 2500,
@@ -59,8 +81,8 @@ function playMovie(mcode) {
   css.left = "50%";
   css.zIndex = "9999";
   css.transform = "translate(-50%, -50%)";
-  css.width = "700px";
-  css.height = "450px";
+  css.width = "70vw";
+  css.aspectRatio = "16/9";
   css.backgroundColor = "#000";
 
   // 4. 아이프레임 CSS설정
@@ -109,6 +131,6 @@ function playMovie(mcode) {
 ///////////////////////////////////////////
 
 
-window.addEventListener("resize", function(){
-  window.location.reload();
-})
+// window.addEventListener("resize", function(){
+//   window.location.reload();
+// })

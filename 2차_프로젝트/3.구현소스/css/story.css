@@ -1,0 +1,191 @@
+/* 컨셉아트 페이지 CSS - story.css */
+
+/* 소개박스 */
+.art-intro {
+  display: flex;
+  /* aspect-ratio: 1.7; */
+  /* outline: 5px dotted blue; */
+}
+/* 소개박스 하위 글박스 */
+.art-intro article {
+  width: 33.333%;
+  padding: 7vh 5vw 0 5vw;
+  box-sizing: border-box;
+}
+
+/* 이미지설명 상단 큰 이미지 숨기기 */
+.art-intro article .fx-gallery-box {
+  display: none;
+}
+.text-right {
+  text-align: right;
+}
+
+/* 소개박스 하위 갤러리박스 */
+.art-intro aside {
+  width: 66.666%;
+  /* padding: 5vh; */
+  box-sizing: border-box;
+}
+
+/* 갤러리 플렉스 박스 */
+.fx-gallery-box {
+  /* width: 70vw; */
+  aspect-ratio: 1.4;
+  /* margin-bottom: 5vh; */
+  /* outline: 1px dashed red; */
+}
+.fx-gallery-box ul {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.fx-gallery-box ul li {
+  width: 33.333%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* outline: 1px dotted green; */
+}
+.fx-gallery-box ul li.large {
+  width: 66.666%;
+}
+/* 라잇박스를 위한 a요소 넣기 */
+.fx-gallery-box ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/*********************************************** 소개영역 ***********************************************/
+
+.art-intro h2 {
+  font-weight: bold;
+  font-size: 2vw;
+  margin: 3vw 0 3vw 0;
+}
+
+.art-intro p {
+  line-height: 2.5;
+  font-size: 0.8vw;
+}
+
+/********************************************** 갤러리 구역 **********************************************/
+/*********************** Research 구역 사진 ***********************/
+.gbox1 ul li:nth-child(1) {
+  background-image: url(../img/research_img/1.jpg);
+  background-position: 55%;
+}
+.gbox1 ul li:nth-child(2) {
+  background-image: url(../img/research_img/2.jpg);
+}
+.gbox1 ul li:nth-child(3) {
+  background-image: url(../img/research_img/3.jpg);
+  background-position: 100%;
+}
+.gbox1 ul li:nth-child(4) {
+  background-image: url(../img/research_img/5.jpg);
+  background-position: 90%;
+}
+.gbox1 ul li:nth-child(5) {
+  background-image: url(../img/research_img/6.jpg);
+  background-position: 100%;
+}
+
+/*********************** The House 구역 사진 ***********************/
+.gbox2 ul li:nth-child(1) {
+  background-image: url(../img/house_img/house4.jpg);
+  background-position-y: 60%;
+}
+.gbox2 ul li:nth-child(2) {
+  background-image: url(../img/house_img/house8.jpg);
+}
+.gbox2 ul li:nth-child(3) {
+  background-image: url(../img/house_img/house11.jpg);
+  background-position: 50%;
+}
+.gbox2 ul li:nth-child(4) {
+  background-image: url(../img/house_img/house14.jpg);
+  background-position: 60%;
+}
+.gbox2 ul li:nth-child(5) {
+  background-image: url(../img/house_img/house15.jpg);
+  background-position: 60%;
+}
+
+/*********************** The House 구역 사진 ***********************/
+.gbox3 ul li:nth-child(1) {
+  background-image: url(../img/tepui_img/tepui2.jpg);
+  background-position: 66%;
+}
+.gbox3 ul li:nth-child(2) {
+  background-image: url(../img/tepui_img/tepui4.jpg);
+}
+.gbox3 ul li:nth-child(3) {
+  background-image: url(../img/tepui_img/tepui12.jpg);
+  background-position: 32%;
+}
+.gbox3 ul li:nth-child(4) {
+  background-image: url(../img/tepui_img/tepui13.jpg);
+  background-position: 90%;
+}
+.gbox3 ul li:nth-child(5) {
+  background-image: url(../img/tepui_img/tepui14.jpg);
+  background-position-x: 25%;
+}
+
+/*********************** The Airship 구역 사진 ***********************/
+.gbox4 ul li:nth-child(1) {
+  background-image: url(../img/airship_img/airship13.jpg);
+  background-position-y: 45%;
+}
+.gbox4 ul li:nth-child(2) {
+  background-image: url(../img/airship_img/airship5.jpg);
+}
+.gbox4 ul li:nth-child(3) {
+  background-image: url(../img/airship_img/airship10.jpg);
+}
+.gbox4 ul li:nth-child(4) {
+  background-image: url(../img/airship_img/airship11.jpg);
+  background-position-x: 32%;
+}
+.gbox4 ul li:nth-child(5) {
+  background-image: url(../img/airship_img/airship2.jpg);
+}
+
+.gbox4 li a:last-child{
+  display: none;
+}
+
+/* 라잇박스 플러그인용 CSS 재설정 */
+#jquery-lightbox,
+#lightbox-container-image-data-box  {
+    width: 60vw !important;
+    height: auto !important;
+    top: 50% !important;
+    left: 20vw !important;
+    translate: 0 -50%;
+    box-sizing: border-box;
+}
+#jquery-lightbox {
+    position: fixed;
+}
+#lightbox-container-image-box{
+    width: 60vw !important;
+    height: auto !important;
+}
+#lightbox-container-image-box img{
+  width: 100% !important;
+}
+#lightbox-nav-btnPrev,
+#lightbox-nav-btnNext {
+  height: 100% !important;
+}
+
+#lightbox-secNav-btnClose {
+  padding-top: 0.7em;
+  
+}
+
+#lightbox-nav {
+  height: 95%;
+}

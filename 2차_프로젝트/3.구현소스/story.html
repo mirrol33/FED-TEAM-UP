@@ -2,31 +2,242 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, user-scalable=no" />
-    <title>2차 팀프로젝트 - 업팀</title>
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1.0, user-scalable=no"
+    />
+    <title>2차 팀프로젝트 - 업팀(스토리 페이지)</title>
+    <!-- 라잇박스 CSS -->
+    <link rel="stylesheet" href="./css/jquery.lightbox-0.5.css" />
     <!-- 공통 CSS/JS 삭제불가!! -->
     <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/basic.css" />
+    <!-- Webfont 웹폰트 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    />
+    <!-- main CSS/JS -->
+    <link rel="stylesheet" href="./css/story.css" />
+    <!-- 컨셉 아트 미디어쿼리 CSS -->
+    <link rel="stylesheet" href="./css/story_media.css" />
+
+    <!-- 스크립트 불러오기 -->
     <script type="module" src="./js/basic.js"></script>
     <!-- vue.js -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-    <!-- 뷰JS vuex CDN : 뷰JS보다 한단계위 버전 불러와야함! -->
-    <script src="https://unpkg.com/vuex@3.0.0"></script>
     <!-- jQuery -->
     <script src="./js/jquery.min.js"></script>
-    <!-- Webfont 웹폰트 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
     <!--// 공통 CSS/JS 삭제불가!! -->
 
+    <!-- 라잇박스 JS -->
+    <script src="./js/jquery.lightbox-0.5.js"></script>
+
+    <script src="./js/story.js" type="module"></script>
   </head>
   <body>
     <header>
       <!-- 1. 상단영역 -->
     </header>
     <main>
-      <div class="inner">
-        <!-- 2. 컨텐츠영역 -->
+      <div class="story">
+        <!-- 2. 컨텐츠 영역 -->
+        <!-------------------------- Research 영역 -------------------------->
+        <section class="art-intro">
+          <!-- 갤러리는 aside 태그에 담긴다! -->
+          <aside>
+            <div class="fx-gallery-box gbox1">
+              <ul>
+                <li>
+                  <a href="./img/research_img/1.jpg" title="UP Image" class="view"></a>
+                </li>
+                <li class="large">
+                  <a href="./img/research_img/2.jpg" title="UP Image" class="view"></a>
+                </li>
+                <li>
+                  <a href="./img/research_img/3.jpg" title="UP Image" class="view"></a>
+                </li>
+                <li>
+                  <a href="./img/research_img/5.jpg" title="UP Image" class="view"></a>
+                </li>
+                <li>
+                  <a href="./img/research_img/6.jpg" title="UP Image" class="view"></a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          <!-- 
+            [ 라잇박스 플러그인 셋팅법 ]
+            - 썸네일 이미지를 a태그로 감싼다
+            - href 속성값에 큰 이미지 경로를 써준다
+            - title 속성값에 이미지 설명을 써준다
+            - a태그에 적당한 클래스를 주고 이것으로 플러그인 적용함
+           -->
+
+          <!-- 글내용은 article 태그에 담긴다! -->
+          <article>
+            <div class="fx-gallery-box gbox1">
+              <ul>
+                <li style="display: none"></li>
+                <li style="width: 100%"></li>
+              </ul>
+            </div>
+            <h2>Research</h2>
+            <p>
+              “Adventure is out there!” is the familiar motto from Up that
+              inspired many. And the directors and artists proved it to
+              themselves when they sought firsthand reference to design the
+              pinnacle world where Carl’s journey would end. Together, they
+              climbed mountains, trampled through jungle, and even got caught in
+              a storm atop a tepui mountain in South America. “The research trip
+              to Venezuela was one of the highlights of my career,” said
+              Production Designer Ricky Nierva, “but I’m also glad we made it
+              back alive to make the movie!”
+            </p>
+          </article>
+        </section>
+
+        <!-------------------------- The House 영역 -------------------------->
+        <section class="art-intro">
+          <!-- 글내용은 article 태그에 담긴다! -->
+          <article class="text-right">
+            <div class="fx-gallery-box gbox2">
+              <ul>
+                <li style="width: 100%"></li>
+              </ul>
+            </div>
+            <h2>The House</h2>
+            <p>
+              Unlike most stories about leaving home, Up needed a house that
+              would go along for the journey. The Pixar team treated Carl’s
+              house like a film character, touring vintage Oakland and Berkeley
+              neighborhoods to cast for the right mix of comfort and
+              familiarity, with just a touch of melancholy. “We were trying to
+              make Carl’s house look like your grandparents’ house smelled,”
+              explained Producer Jonas Rivera.
+            </p>
+          </article>
+          <!-- 갤러리는 aside 태그에 담긴다! -->
+          <aside>
+            <div class="fx-gallery-box gbox2">
+              <ul>
+                <li class="large">
+                  <a href="./img/house_img/house4.jpg" title="UP Image" class="view"></a>
+                </li>
+                <li>
+                  <a href="./img/house_img/house8.jpg" title="UP Image" class="view"></a>
+                </li>
+                <li>
+                  <a href="./img/house_img/house11.jpg" title="UP Image" class="view"></a>
+                </li>
+                <li>
+                  <a href="./img/house_img/house14.jpg" title="UP Image" class="view"></a>
+                </li>
+                <li>
+                  <a href="./img/house_img/house15.jpg" title="UP Image" class="view"></a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </section>
+
+        <!-------------------------- Tepui 영역 -------------------------->
+        <section class="art-intro">
+          <!-- 갤러리는 aside 태그에 담긴다! -->
+          <aside>
+            <div class="fx-gallery-box gbox3">
+              <ul>
+                <li>
+                  <a href="./img/tepui_img/tepui2.jpg" title="UP Image" class="view"></a>
+                </li>
+                <li class="large">
+                  <a href="./img/tepui_img/tepui4.jpg" title="UP Image" class="view"></a>
+                </li>
+                <li>
+                  <a href="./img/tepui_img/tepui12.jpg" title="UP Image" class="view"></a>
+                </li>
+                <li>
+                  <a href="./img/tepui_img/tepui13.jpg" title="UP Image" class="view"></a>
+                </li>
+                <li>
+                  <a href="./img/tepui_img/tepui14.jpg" title="UP Image" class="view"></a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          <!-- 글내용은 article 태그에 담긴다! -->
+          <article>
+            <div class="fx-gallery-box gbox3">
+              <ul>
+                <li style="display: none"></li>
+                <li style="width: 100%"></li>
+              </ul>
+            </div>
+            <h2>Tepui</h2>
+            <p>
+              Carl’s epic adventure required a destination both fantastic and
+              plausible. When Director Pete Docter happened on a television
+              documentary about the mysterious tepuis of South America, he
+              discovered the perfect world to explore. The massive mile-high
+              plateaus in Venezuela are among the most uncharted places on
+              Earth. Pixar sent a team of artists for a look, and the film's
+              bizarre rock formations, exotic flora, towering waterfall, and
+              fog-shrouded labyrinth can be traced to tepui landscapes. So
+              fantastic were the images, Docter wondered if the very real Tepuis
+              might look too incredible.
+            </p>
+          </article>
+        </section>
+
+        <!-------------------------- The Airship 영역 -------------------------->
+        <section class="art-intro">
+          <!-- 글내용은 article 태그에 담긴다! -->
+          <article class="text-right">
+            <div class="fx-gallery-box gbox4">
+              <ul>
+                <li style="width: 100%"></li>
+              </ul>
+            </div>
+            <h2>The Airship</h2>
+            <p>
+              With Charles Muntz, the most fabled adventurer of his day, the
+              filmmakers gave him the 1930s’ most state-of-the-art airship.
+              Encouraged to indulge in size and detail, the artists created a
+              half-mile-long art deco masterpiece filled with the spoils of a
+              hero turned villain. Still, there were issues of how far to take
+              the airship. “We had a trophy room with an Easter Island head in
+              there,” recalled Production Artist Noah Klocek. “At one point John
+              Lasseter said 'no, that would sink the ship'.”
+            </p>
+          </article>
+          <!-- 갤러리는 aside 태그에 담긴다! -->
+          <aside>
+            <div class="fx-gallery-box gbox4">
+              <ul>
+                <li class="large">
+                  <a href="./img/airship_img/airship13.jpg" title="UP Image" class="view"></a>
+                  <a href="./img/airship_img/airship10.jpg" title="UP Image" class="view"></a>
+                </li>
+                <li>
+                  <a href="./img/airship_img/airship5.jpg" title="UP Image" class="view"></a>
+                </li>
+                <li>
+                  <a href="./img/airship_img/airship10.jpg" title="UP Image" class="view"></a>
+                  <a href="./img/airship_img/airship13.jpg" title="UP Image" class="view"></a>
+                </li>
+                <li>
+                  <a href="./img/airship_img/airship11.jpg" title="UP Image" class="view"></a>
+                </li>
+                <li>
+                  <a href="./img/airship_img/airship2.jpg" title="UP Image" class="view"></a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </section>
       </div>
     </main>
     <footer>

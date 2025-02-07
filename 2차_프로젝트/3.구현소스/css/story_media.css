@@ -1,0 +1,116 @@
+/* 컨셉아트 페이지 미디어쿼리 CSS - story_media.css */
+
+@media screen and (max-width: 800px) {
+  /* 홀수번째 플렉스 순서 컬럼형 역순 */
+  .art-intro:nth-child(odd) {
+    flex-direction: column-reverse;
+  }
+  /* 짝수번째 플렉스 순서 컬럼형 그대로 */
+  .art-intro:nth-child(even) {
+    flex-direction: column;
+  }
+
+  /* 갤러리 글박스 */
+  .art-intro article {
+    width: 100%;
+    padding: 5vh;
+    text-align: center;
+  }
+
+  /* 갤러리 사진박스 */
+  .art-intro aside {
+    width: 100%;
+    padding-bottom: 13vh;
+  }
+
+  /* 이미지설명 상단 큰 이미지 보이기 */
+  .art-intro article .fx-gallery-box {
+    display: block;
+  }
+
+  /* 갤러리 제목 설정 */
+  .art-intro h2 {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-size: 5vw;
+  }
+
+  /* 갤러리 설명 설정 */
+  .art-intro p {
+    font-size: 2.5vw;
+    padding: 0 5vw 0 5vw;
+  }
+
+  /* 갤러리박스이 큰 이미지 숨기기 */
+  .fx-gallery-box ul li.large {
+    display: none;
+  }
+  /* 갤러리박스 모든 li는 무조건 한줄에 2개씩(width:50%) */
+  .fx-gallery-box ul li {
+    width: 50%;
+  }
+
+  .large {
+    border-radius: 30px;
+  }
+
+  /********************************* 라잇박스 플러그인용 CSS 재설정(삭제금지) *********************************/
+  #jquery-lightbox,
+  #lightbox-container-image-data-box {
+    width: 90vw !important;
+    height: auto !important;
+    top: 50% !important;
+    left: 5vw !important;
+    translate: 0 -50%;
+    box-sizing: border-box;
+  }
+  #jquery-lightbox {
+    position: fixed;
+  }
+  #lightbox-container-image-box {
+    width: 90vw !important;
+    height: auto !important;
+  }
+  #lightbox-container-image-box img {
+    width: 100% !important;
+  }
+  #lightbox-nav-btnPrev,
+  #lightbox-nav-btnNext {
+    height: 95% !important;
+  }
+
+  /***************** 갤러리 대표사진 클립패스 구역 *****************/
+  .gbox1 ul li:nth-child(2) {
+    clip-path: circle(at center);
+  }
+
+  .gbox2 ul li:nth-child(1) {
+    clip-path: circle(at center);
+  }
+
+  .gbox3 ul li:nth-child(2) {
+    clip-path: circle(at center);
+    background-position: 100%;
+  }
+
+  .gbox4 ul li:nth-child(1) {
+    clip-path: circle(at center);
+  }
+
+  /***************** 4번째 갤러리 사진 순서 변경 *****************/
+  .gbox4 ul li:nth-child(1) {
+    background-image: url(../img/airship/airship10.jpg);
+    background-position: -58%;
+  }
+  .gbox4 ul li:nth-child(3) {
+    background-image: url(../img/airship/airship13.jpg);
+  }
+
+  .gbox4 li a:first-child {
+    display: none;
+  }
+
+  .gbox4 li a:last-child {
+    display: block;
+  }
+}

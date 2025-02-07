@@ -105,7 +105,6 @@ const proComponent = {
   },
   methods: {
     // Vuex의 Mutation 사용
-    // setCategory(cate){this.$store.commit("setCategory", cate)}
     ...Vuex.mapMutations(["setCategory", "addToCart", "removeFromCart", "decreaseQt", "increaseQt"]),
 
     selectCategory(cate, text) {

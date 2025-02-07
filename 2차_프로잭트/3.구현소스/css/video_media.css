@@ -1,0 +1,78 @@
+/* 영상 페이지 미디어 쿼리 CSS - video_media.css */
+
+@media screen and (max-width: 1100px) {
+  .swiper{
+    top: 40px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .black-box {
+    position: absolute;
+    top: -30%;
+    left: -17%;
+    width: 450px;
+    aspect-ratio: 0.7;
+    /* height: 150%; */
+    background-color: #515151;
+  }
+
+  .black-box h2 {
+    top: 6vw;
+    left: 8vw;
+  }
+
+  .swiper{
+    top: 2vh;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .swiper{
+    top: 7vh;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .black-box {
+    position: absolute;
+    top: -60%;
+    left: -15%;
+    width: 85vw;
+    aspect-ratio: 0.7;
+    height: 85vh;
+    background-color: #515151;
+  }
+
+  .swiper{
+    top: 10vh;
+  }
+
+  .black-box h2{
+    font-size: max(50px, 3vw);
+    top: 12vw;
+  }
+  
+  .arrow-icon {
+    bottom: 13%;
+    left: 10%;
+  }
+  
+  .arrow-icon i {
+    line-height: 6.5vh;
+  }
+
+  .swiper-slide p {
+    text-align: left;
+  }
+
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    width: 128px !important;
+    position: absolute;
+    bottom: 16% !important;
+    left: 55% !important;
+  }
+}

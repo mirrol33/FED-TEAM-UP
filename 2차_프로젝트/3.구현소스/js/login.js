@@ -97,7 +97,7 @@ const loginComp = {
         // this.$router.push('/');
         
         // 첫번째 페이지 / 로 이동
-        // window.location.href = './';
+        window.location.href = './';
       }
     },
     // 4. 데이터셋업파트

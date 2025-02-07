@@ -76,18 +76,18 @@ const loginComp = {
       </div>
     `,
     // 2. 리턴함수 데이터
-    data(){
-        return{
-          msg: "준비",
-        };
-    },
+    // data(){
+    //     return{
+    //       msg: "준비",
+    //     };
+    // },
     // 3. 메서드
     methods: {
       // 전역 스토어 변수 업데이트 메서드 호출
       actLogin(pm,txt){
         // pm : 로그인된 사용자 정보 객체
         // console.log('가상돔 메서드 실행!!',pm);
-        this.msg = txt;
+        // this.msg = txt;
         // 1. 스토어 뮤테이션스 호출
         store.commit('setLogin',pm);
         // 2. 세션스토리지 셋업하기! 'login-user'

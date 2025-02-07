@@ -20,8 +20,8 @@
   max-width: 700px;
   min-height: 275px;
   margin: 0 auto;
-  border: 2px solid #737373;
-  border-radius: 10px;
+  border: 1px solid #777;
+  border-radius: 24px;
   /* 크기유지 */
   box-sizing: border-box;
   padding: 60px 15px;

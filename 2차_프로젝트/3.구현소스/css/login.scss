@@ -1,6 +1,8 @@
 .main-area {
   padding: 20vh 0;
-  width: 100%;
+  box-sizing: border-box;
+  width: 90%;
+  margin: 0 auto;
   h2 {
     font-size: 2rem;
     font-weight: 700;

@@ -58,21 +58,18 @@ const loginComp = {
                         전체 form요소의 데이터를 action
                         페이지로 전달함! -->
               </div>
-               <!-- 기타링크 --> 
+              <!-- 기타링크  
               <div class="addbx">
                 <span>
                   <input type="checkbox" id="chkbx" name="chkbx" />
                   <label htmlFor="chkbx">아이디저장</label>
                 </span>
-                 <!-- 모바일에서 보일바 .bar1 --> 
                 <b class="bar bar1"> | </b>
                 <a href="#">아이디찾기</a>
-                 <!-- 모바일에서 숨길바 .bar2 --> 
                 <b class="bar bar2"> | </b>
-                 <!-- 모바일에서 줄바꿈 .brk --> 
                 <br class="brk" />
                 <a href="#">비밀번호찾기</a> |<a href="#">회원가입</a>
-              </div>
+              </div> -->
             </form>
           </section>
         </main>

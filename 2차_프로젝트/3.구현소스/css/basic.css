@@ -573,6 +573,9 @@ footer .footer p {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
+  .products-wrap .cart-list-aside .inner {
+    height: 75%;
+  }
 }
 @media (max-width: 768px) {
   .products-wrap .product-list {
@@ -581,5 +584,8 @@ footer .footer p {
   }
   .products-wrap .product-list .product-box a p {
     display: none;
+  }
+  .products-wrap .cart-list-aside .inner {
+    height: 70%;
   }
 }/*# sourceMappingURL=basic.css.map */

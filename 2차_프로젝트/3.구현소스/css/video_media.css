@@ -7,15 +7,24 @@
 }
 
 @media screen and (max-width: 800px) {
-  .black-box {
+  /* .black-box {
     position: absolute;
     top: -30%;
     left: -17%;
     width: 450px;
-    aspect-ratio: 0.7;
-    /* height: 150%; */
+    aspect-ratio: 0.7;   
     background-color: #515151;
-  }
+  } */
+
+  .black-box {
+    position: absolute;
+    top: 90px;
+    left: 0%;
+    width: 50%;
+    aspect-ratio: 0.5;   
+    background-color: #515151;
+
+}
 
   .black-box h2 {
     top: 6vw;
@@ -34,7 +43,7 @@
 }
 
 @media screen and (max-width: 450px) {
-  .black-box {
+  /* .black-box {
     position: absolute;
     top: -60%;
     left: -15%;
@@ -42,7 +51,16 @@
     aspect-ratio: 0.7;
     height: 85vh;
     background-color: #515151;
-  }
+  } */
+
+  .black-box {
+    position: absolute;
+    top: 77px;
+    left: 0;
+    width: 50%;
+    aspect-ratio: 0.25; 
+    background-color: #515151;
+}
 
   .swiper{
     top: 10vh;
